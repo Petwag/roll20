@@ -1,0 +1,29 @@
+<rolltemplate class="sheet-rolltemplate-standardroll">
+<!--  regular roll -->
+    <div class="sheet-template-container">
+
+        <table>
+            <tr>
+                <caption>{{rollName}}</caption>
+            </tr>
+            <tr>
+                <td><span>Jet: </span></td><td>{{roll}}</td>
+            </tr>
+            <tr>
+                <td><span>Seuil: </span></td><td>{{difficulty}}</td>
+            </tr>
+            <tr>
+                <td colspan=2>
+                    {{#rollGreater() roll difficulty}}
+                        <span class="sheet-failure">Echec</span>
+                    {{/rollGreater() roll difficulty}}
+                    {{#^rollGreater() roll difficulty}}
+                        <span class="sheet-success">Succès</span>
+                    {{/^rollGreater() roll difficulty}}
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+</rolltemplate>

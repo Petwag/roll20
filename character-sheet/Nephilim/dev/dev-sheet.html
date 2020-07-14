@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+<link rel="stylesheet" type="text/css" href="../Nephilim_Legende.css">
+</head>
+<body>
+<div class="sheet-page">
+  <!-- Header -->
+<div class="sheet-header">
+    <button type="action" name="act_tab1"><img src="https://i.ibb.co/mqw7tvP/character-icon.png" alt="character-icon"><span>Nephilim</span></button>
+    <button type="action" name="act_tab2"><img src="https://i.ibb.co/yg9v5tc/magic-icon.png" alt="magic-icon"><span>Magie</span></button>
+    <button type="action" name="act_tab3"><img src="https://i.ibb.co/LdBC738/alchemy-icon.png" alt="alchemy-icon"><span>Alchimie</span></button>
+    <button type="action" name="act_tab4"><img src="https://i.ibb.co/ww1rysj/kabbale-icon.png" alt="kabbale-icon"><span>Kabbale</span></button>
+    <button type="action" name="act_tab5"><img src="https://i.ibb.co/c8MLhJW/backpack.png" alt="backpack-icon"><span>Équipement</span></button>
+</div>
+
+<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='tab1'/>
+<input type="hidden" name="attr_useKa"
+       value="([[?{Utiliser Ka?|Non, 0|Feu, @{kaFire}|Eau, @{kaWater}|Air, @{kaAir}|Terre, @{kaEarth}|Lune, @{kaMoon}}]])"/>
+
+<input type="hidden" name="attr_haveBonus" value="([[?{Bonus/Malus?|0}]])"/>
+
+<!--End Header --><!-- Character -->
+
+<div class="sheet-tab1 sheet-tab-content">
+    <h2 class="sheet-title"><span>Néphilim</span></h2>
+
+    <div class="sheet-grid-container-2">
+        <div class="sheet-grid-cell">
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Pentacle</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+
+                <div class="sheet-input-row">
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-pentacle-row sheet-my-row-header">
+                            <div class="sheet-my-left-header-cell"></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/Zd9LJd7/fire.png" alt="fire">
+                                <span>Feu</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/XkcvCqT/water.png" alt="water">
+                                <span>Eau</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/YDsjhLp/air.png" alt="air">
+                                <span>Air</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/SnGSYr3/earth.png" alt="earth">
+                                <span>Terre</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/rmx5cZH/moon.png" alt="moon">
+                                <span>Lune</span></div>
+                        </div>
+                        <div class="sheet-my-row sheet-pentacle-row">
+                            <div class="sheet-my-left-header-cell">Pentacle</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_kaFire" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_kaWater" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_kaAir" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_kaEarth" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_kaMoon" value="0"></div>
+                        </div>
+                        <div class="sheet-my-row sheet-pentacle-row">
+                            <div class="sheet-my-left-header-cell">Test de Ka</div>
+                            <div class="sheet-my-cell">
+                                <input type="hidden" name="attr_kaFireCheckValue" value="(@{kaFire}+@{haveBonus})"/>
+                                <button type="roll" value="&{template:standardroll} {{rollName=Ka Feu}} {{roll=[[1d100]]}} {{difficulty=[[@{kaFireCheckValue}*10]]}}"
+                                        name="roll_fireCheck"></button>
+                            </div>
+                            <div class="sheet-my-cell">
+                                <input type="hidden" name="attr_kaWaterCheckValue" value="(@{kaWater}+@{haveBonus})"/>
+                                <button type="roll" value="&{template:standardroll} {{rollName=Ka Eau}} {{roll=[[1d100]]}} {{difficulty=[[@{kaWaterCheckValue}*10]]}}"
+                                        name="roll_fireCheck"></button>
+                            </div>
+                            <div class="sheet-my-cell">
+                                <input type="hidden" name="attr_kaAirCheckValue" value="(@{kaAir}+@{haveBonus})"/>
+                                <button type="roll" value="&{template:standardroll} {{rollName=Ka Air}} {{roll=[[1d100]]}} {{difficulty=[[@{kaAirCheckValue}*10]]}}"
+                                        name="roll_fireCheck"></button>
+                            </div>
+                            <div class="sheet-my-cell">
+                                <input type="hidden" name="attr_kaEarthCheckValue" value="(@{kaEarth}+@{haveBonus})"/>
+                                <button type="roll" value="&{template:standardroll} {{rollName=Ka Terre}} {{roll=[[1d100]]}} {{difficulty=[[@{kaEarthCheckValue}*10]]}}"
+                                        name="roll_fireCheck"></button>
+                            </div>
+                            <div class="sheet-my-cell">
+                                <input type="hidden" name="attr_kaMoonCheckValue" value="(@{kaMoon}+@{haveBonus})"/>
+                                <button type="roll" value="&{template:standardroll} {{rollName=Ka Lune}} {{roll=[[1d100]]}} {{difficulty=[[@{kaMoonCheckValue}*10]]}}"
+                                        name="roll_fireCheck"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Info</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+                <div class="sheet-input-row">
+                    <span>Nom:</span>
+                    <input type="text" name="attr_character_name"/>
+                </div>
+                <div class="sheet-input-row">
+                    <span>XP:</span>
+                    <input type="number" name="attr_sapience" value="0">
+                </div>
+
+                <div class="sheet-input-row">
+                    <span>Stase:</span>
+                    <input type="text" name="attr_metaStase"/>
+                    <input name="attr_metaStaseBonus" type="number" value="0"/>
+                    <input name="attr_metaStaseBonus_max" type="number" value="@{metaKa}" disabled="true" />
+                </div>
+
+                <div class="sheet-input-row">
+                    <span>Vision Ka:</span>
+                    <input type="number" name="attr_kaVision" value="@{metaKa}" disabled="true">
+                </div>
+
+                <div class="sheet-input-row">
+                    <span>Enochéen:</span>
+                    <input type="number" name="attr_enoch" value="@{metaKa}" disabled="true">
+                </div>
+
+                <div class="sheet-input-row">
+                    <span>Quête Arcane Majeur:</span>
+                    <input type="text" name="attr_arcana"/>
+                    <input name="attr_arcanaDegree" type="number" value="0"/>
+                </div>
+
+            </div></div>
+
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Métamorphe</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+                <div class="sheet-input-row">
+                    <span>Métamorphe:</span>
+                    <input type="text" name="attr_meta"/>
+                    <input type="hidden" name="attr_metaBonusVal" value="0" />
+                    <input name="attr_metaBonus" type="number" value="@{metaBonusVal}" disabled="true" />
+                </div>
+
+                <div class="sheet-input-row">
+                    <span>Ka Dominant</span>
+                    <select name="attr_metaKa">
+                        <option value> -- </option>
+                        <option value="@{kaFire}">Feu</option>
+                        <option value="@{kaWater}">Eau</option>
+                        <option value="@{kaAir}">Air</option>
+                        <option value="@{kaEarth}">Terre</option>
+                        <option value="@{kaMoon}">Lune</option>
+                    </select>
+                </div>
+
+                <div class="sheet-my-table sheet-metamorphosis-fields">
+                    <div class="sheet-my-row sheet-metamorphosis-row sheet-my-row-header">
+                        <p class="sheet-my-header-cell"></p>
+                        <p class="sheet-my-header-cell">Métamophose</p>
+                        <p class="sheet-my-header-cell">Perma?</p>
+                    </div>
+                    <fieldset class="repeating_metamorphosis">
+                        <div class="sheet-my-row sheet-metamorphosis-row">
+                            <p class="sheet-my-cell"><span class="sheet-counter"></span></p>
+                            <p class="sheet-my-cell"><input type="text" name="attr_metaName"/></p>
+                            <p class="sheet-my-cell"><input type="checkbox" name="attr_metaPerm"/></p>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div></div>
+
+        </div>
+
+        <div class="sheet-grid-cell">
+            <div class="sheet-category sheet-right-tab"><h4>Simulacre</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border-right"><div class="sheet-content-right">
+
+                <div class="sheet-input-row">
+                    <span>Nom:</span>
+                    <input type="text" name="attr_simName"/>
+                </div>
+                <div class="sheet-input-row">
+                    <span>Ka Soleil:</span>
+                    <input type="number" name="attr_simKaSun">
+                </div>
+                <div class="sheet-input-row">
+                    <span>Vécue:</span>
+                    <input type="text" name="attr_simLife"/>
+                    <input type="number" name="attr_simLifeDegree" value="0">
+                    <input type="hidden" name="attr_simLifeCheckValue"
+                           value="(@{simLifeDegree}+@{useKa}+@{haveBonus})"/>
+                    <button type="roll"
+                            value="&{template:standardroll} {{rollName=@{simName}}} {{roll=[[1d100]]}} {{difficulty=[[@{simLifeCheckValue}*10]]}}"
+                            name="roll_simLifeCheck"></button>
+                </div>
+
+            </div></div>
+
+            <div class="sheet-category sheet-right-tab"><h4>Chutes</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border-right"><div class="sheet-content-right">
+
+                <div class="sheet-input-row">
+                    <span>Khaïba:</span>
+                    <input type="hidden" name="attr_khaiba" value="0">
+                    <input class="sheet-nospace" type="checkbox" name="attr_k1" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_k2" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_k3" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_k4" />
+                    <input class="sheet-leftspace" type="checkbox" name="attr_k5" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_k6" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_k7" />
+                    <input class="sheet-leftspace" type="checkbox" name="attr_k8" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_k9" />
+                    <input type="checkbox" name="attr_k10" />
+                    <img src="https://i.ibb.co/pfS3DJD/information.png" title="C’est la corruption du Ka dominant qui entraîne des modifications de la forme du Nephilim ainsi que de sa nature profonde.">
+                    <div class="sheet-break"></div>
+                    <input type="text"/>
+                </div>
+
+                <div class="sheet-input-row">
+                    <span>Narcose:</span>
+                    <input type="hidden" name="attr_narcose" value="0">
+                    <input class="sheet-nospace" type="checkbox" name="attr_n1" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_n2" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_n3" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_n4" />
+                    <input class="sheet-leftspace" type="checkbox" name="attr_n5" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_n6" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_n7" />
+                    <input class="sheet-leftspace" type="checkbox" name="attr_n8" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_n9" />
+                    <input type="checkbox" name="attr_n10" />
+                    <img src="https://i.ibb.co/pfS3DJD/information.png" title="C’est l’attachement à un lieu du Ka du Nephilim et la mise en sommeil du Ka progressive, une forme d’expression incontrôlée des Ka-éléments.">
+                </div>
+
+                <div class="sheet-input-row">
+                    <span>Ombre:</span>
+                    <input type="hidden" name="attr_shadow" value="0">
+                    <input class="sheet-nospace" type="checkbox" name="attr_s1" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_s2" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_s3" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_s4" />
+                    <input class="sheet-leftspace" type="checkbox" name="attr_s5" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_s6" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_s7" />
+                    <input class="sheet-leftspace" type="checkbox" name="attr_s8" />
+                    <input class="sheet-nospace" type="checkbox" name="attr_s9" />
+                    <input type="checkbox" name="attr_s10" />
+                    <img src="https://i.ibb.co/pfS3DJD/information.png" title="C’est la perte de contrôle du Simulacre qui reprend le dessus sur le Nephilim.">
+                    <div class="sheet-break"></div>
+                    <input type="text"/>
+                </div>
+
+            </div></div>
+
+            <div class="sheet-category sheet-right-tab"><h4>Compétences</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border-right sheet-flex-grow-full"><div class="sheet-content-right">
+
+                <div class="sheet-input-row">
+                    <span>Quêtes Esotériques:</span>
+                    <div class="sheet-break"></div>
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-skill-row sheet-my-row-header">
+                            <p class="sheet-my-header-cell">Compétence</p>
+                            <p class="sheet-my-header-cell">Degrés</p>
+                            <p></p>
+                        </div>
+                        <fieldset class="repeating_quests">
+                            <div class="sheet-my-row sheet-skill-row">
+                                <p class="sheet-my-cell"><input type="text" name="attr_questName"/></p>
+                                <p class="sheet-my-cell"><input type="number" name="attr_questDegree"/></p>
+                                <input type="hidden" name="attr_questRollValue" value="(@{questDegree}+@{useKa}+@{haveBonus})"/>
+                                <button type="roll"
+                                        value="&{template:standardroll} {{rollName=@{questName}}} {{roll=[[1d100]]}} {{difficulty=[[@{questRollValue}*10]]}}"
+                                        name="roll_questRoll"></button>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="sheet-input-row">
+                    <span>Savoirs Esotériques:</span>
+                    <div class="sheet-break"></div>
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-skill-row sheet-my-row-header">
+                            <p class="sheet-my-header-cell">Compétence</p>
+                            <p class="sheet-my-header-cell">Degrés</p>
+                            <p></p>
+                        </div>
+                        <fieldset class="repeating_knowledge">
+                            <div class="sheet-my-row sheet-skill-row">
+                                <p class="sheet-my-cell"><input type="text" name="attr_knowledgeName"/></p>
+                                <p class="sheet-my-cell"><input type="number" name="attr_knowledgeDegree"/></p>
+                                <input type="hidden" name="attr_knowledgeRollValue" value="(@{knowledgeDegree}+@{useKa}+@{haveBonus})"/>
+                                <button type="roll"
+                                        value="&{template:standardroll} {{rollName=@{knowledgeName}}} {{roll=[[1d100]]}} {{difficulty=[[@{knowledgeRollValue}*10]]}}"
+                                        name="roll_knowledgeRoll"></button>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div></div>
+
+        </div>
+    </div>
+
+    <div class="sheet-grid-container-1">
+        <div class="sheet-grid-cell">
+            <div class="sheet-category"><div class="sheet-left-tri"></div><h4>Vécus</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border"><div class="sheet-content">
+
+                <fieldset class="repeating_lifes">
+                    <div class="sheet-repeating-container">
+
+                        <div class="sheet-grid-container-2 sheet-repeating-right-button-template">
+                            <div>
+                                <div class="sheet-input-row">
+                                    <span>Nom:</span>
+                                    <input type="text" name="attr_lifeName"/>
+                                </div>
+                                <div class="sheet-input-row">
+                                    <span>Epoque:</span>
+                                    <input type="text" name="attr_lifeEra"/>
+                                </div>
+                                <div class="sheet-input-row">
+                                    <span>Degré:</span>
+                                    <input type="number" name="attr_lifeDegree" value="0">
+                                </div>
+                            </div>
+                            <div class="sheet-flex-center">
+                                    <input type="hidden" name="attr_lifeCheckValue"
+                                           value="(@{lifeDegree}+@{useKa}+@{haveBonus})"/>
+                                    <button type="roll"
+                                            value="&{template:standardroll} {{rollName=@{lifeName}}} {{roll=[[1d100]]}} {{difficulty=[[@{lifeCheckValue}*10]]}}"
+                                            name="roll_lifeCheck"></button>
+                            </div>
+                        </div>
+                        <div class="sheet-input-row">
+                            <span>Résumé:</span>
+                            <textarea name="attr_lifeSummary"></textarea>
+                        </div>
+                        <div class="sheet-input-row">
+                            <span>Mnémos:</span>
+                            <textarea name="attr_lifeMnemos"></textarea>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+            </div></div>
+        </div>
+    </div>
+
+
+    <div class="sheet-grid-container-3">
+        <div class="sheet-grid-cell">
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Actions & Attributs</h4></div>
+            <div class="sheet-border-left sheet-flex-grow-full"><div class="sheet-content-left">
+                <div class="sheet-input-row">
+                    <span>Initiative:</span>
+                    <input type="number" name="attr_init" value="(@{kaWater}*2)" disabled="true" >
+                    <button type="roll" value="/roll 1d6 + @{init} &{tracker}" name="roll_initCheck"></button>
+                </div>
+
+                <div class="sheet-input-row">
+                    <span>Mouvement:</span>
+                    <input type="number" name="attr_mouvement" value="(@{kaWater}*3)" disabled="true">
+                </div>
+                <div class="sheet-input-row">
+                    <span>Perspicacité:</span>
+                    <input type="number" name="attr_intuition" value="(11-@{kaAir})" disabled="true">
+                    <img src="https://i.ibb.co/pfS3DJD/information.png" title="Le nombre d’unités de temps par défaut des enquêtes occultes est de : 11 - Ka-Air">
+                </div>
+                <div class="sheet-input-row">
+                    <span>Récupération:</span>
+                    <input type="number" name="attr_regen" value="(11-@{kaEarth})" disabled="true">
+                </div>
+                <div class="sheet-input-row">
+                    <span>Bonus de Dommage:</span>
+                    <input type="hidden" name="attr_damageBonusValue" value="0">
+                    <input type="number" name="attr_damageBonus" value="(@{damageBonusValue})" disabled="true">
+                </div>
+                <div class="sheet-input-row">
+                    <span>Voile:</span>
+                    <input type="hidden" name="attr_veilValue" value="0">
+                    <input type="number" name="attr_veil" value="(@{veilValue})" disabled="true">
+                    <img src="https://i.ibb.co/pfS3DJD/information.png" title="Une fois pas session de jeu, un Nephilim peut retirer des degrés Rosenkreutz (RK) de la réserve. Ceci symbolise la capacité des Nephilim au Ka-Lune important à détourner l’attention des autorités via les propriétés uniques du Ka-Lune.">
+                </div>
+
+            </div></div>
+        </div>
+
+        <div class="sheet-grid-cell">
+            <div class="sheet-category"><h4>Santé</h4><div class="right-tri"></div></div>
+
+            <div class="sheet-border sheet-flex-grow-full"><div class="sheet-content">
+
+                <div class="sheet-input-row">
+                    <span>Physique:</span>
+                    <div class="sheet-break"></div>
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-life-row">
+                            <div class="sheet-my-cell sheet-my-left-header-cell">Valeur</div>
+                            <div class="sheet-my-cell"><input type="number" disabled="true" value="1"/></div>
+                            <div class="sheet-my-cell"><input type="number" disabled="true" value="2"/></div>
+                            <div class="sheet-my-cell"><input type="number" disabled="true" value="3"/></div>
+                        </div>
+                        <div class="sheet-my-row sheet-life-row">
+                            <div class="sheet-my-cell sheet-my-left-header-cell">Dmg</div>
+                            <div class="sheet-my-cell"><div class="sheet-check-hp">
+                                <input type='hidden' class='sheet-extra-life' name='attr_optionLifePhysical'  value="0"/>
+                                <input type="checkbox">
+                                <input class="sheet-life-optional-1" type="checkbox">
+                                <input class="sheet-life-optional-2" type="checkbox">
+                            </div></div>
+                            <div class="sheet-my-cell"><input type="checkbox"></div>
+                            <div class="sheet-my-cell"><input type="checkbox"></div>
+                        </div>
+                    </div>
+                    <div class="sheet-break"></div>
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-life-row">
+                            <div class="sheet-my-cell sheet-my-left-header-cell">Conséquence</div>
+                            <div class="sheet-my-cell"><input type="number" value="0"/></div>
+                            <div class="sheet-my-cell"><input type="number" value="0"/></div>
+                            <div class="sheet-my-cell"><input type="number" value="0"/></div>
+                        </div>
+                        <div class="sheet-my-row sheet-life-row">
+                            <div class="sheet-my-cell sheet-my-left-header-cell">Max</div>
+                            <div class="sheet-my-cell"><input type="number" value="2" disabled="true"/></div>
+                            <div class="sheet-my-cell"><input type="number" value="4" disabled="true"/></div>
+                            <div class="sheet-my-cell"><input type="number" value="6" disabled="true"/></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sheet-input-row">
+                    <span>Mystique:</span>
+                    <div class="sheet-break"></div>
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-life-row">
+                            <div class="sheet-my-cell sheet-my-left-header-cell">Valeur</div>
+                            <div class="sheet-my-cell"><input type="number" disabled="true" value="1"/></div>
+                            <div class="sheet-my-cell"><input type="number" disabled="true" value="2"/></div>
+                            <div class="sheet-my-cell"><input type="number" disabled="true" value="3"/></div>
+                        </div>
+                        <div class="sheet-my-row sheet-life-row">
+                            <div class="sheet-my-cell sheet-my-left-header-cell">Dmg</div>
+                            <div class="sheet-my-cell"><input type="checkbox"></div>
+                            <div class="sheet-my-cell"><input type="checkbox"></div>
+                            <div class="sheet-my-cell"><input type="checkbox"></div>
+                        </div>
+                    </div>
+                    <div class="sheet-break"></div>
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-life-row">
+                            <div class="sheet-my-cell sheet-my-left-header-cell">Conséquence</div>
+                            <div class="sheet-my-cell"><input type="number" value="0"/></div>
+                            <div class="sheet-my-cell"><input type="number" value="0"/></div>
+                            <div class="sheet-my-cell"><input type="number" value="0"/></div>
+                        </div>
+                        <div class="sheet-my-row sheet-life-row">
+                            <div class="sheet-my-cell sheet-my-left-header-cell">Max</div>
+                            <div class="sheet-my-cell"><input type="number" value="2" disabled="true"/></div>
+                            <div class="sheet-my-cell"><input type="number" value="4" disabled="true"/></div>
+                            <div class="sheet-my-cell"><input type="number" value="6" disabled="true"/></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div></div>
+        </div>
+
+        <div class="sheet-grid-cell">
+            <div class="sheet-category sheet-right-tab"><h4>Fraternité</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border-right sheet-flex-grow-full"><div class="sheet-content-right">
+                <div class="sheet-input-row">
+                    <span>Nom:</span>
+                    <input type="text" name="attr_fraternityName"/>
+                </div>
+                <div class="sheet-input-row">
+                    <span>Niveau:</span>
+                    <input name="attr_fraternityDegree" type="number" value="0"/>
+                </div>
+                <div class="sheet-input-row">
+                    <span>Quête:</span>
+                    <input type="text" name="attr_fraternityQuest"/>
+                </div>
+                <div class="sheet-input-row">
+                    <span>Planque:</span>
+                    <input type="text" name="attr_fraternityHideout"/>
+                </div>
+                <div class="sheet-input-row">
+                    <span>Notes:</span>
+                    <textarea name="attr_fraternityNote"></textarea>
+                </div>
+            </div></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- End Character --><!-- Magic -->
+
+<div class="sheet-tab2 sheet-tab-content">
+    <h2 class="sheet-title"><span>Magie</span></h2>
+
+    <div class="sheet-grid-container-2">
+        <div class="sheet-grid-cell">
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Infos</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+                <div class="sheet-input-row">
+                    <span>Voie:</span>
+                    <select name="attr_magPath">
+                        <option value> -- </option>
+                        <option value="path_sinuous_way">Sentier Sinueux</option>
+                        <option value="path_elevation_spirale">Spirale d'Elévation</option>
+                        <option value="path_mislaying_principles">Principes Egarants</option>
+                        <option value="path_schematic_labyrinth">Labyrinthe Schématique</option>
+                        <option value="path_soul_maze">Dédale de l'Ame</option>
+                    </select>
+                </div>
+                <div class="sheet-input-row">
+                    <span>Etape:</span>
+                    <select name="attr_magStep">
+                        <option value> -- </option>
+                        <option value="step_porch">Porche</option>
+                        <option value="step_crossroad">Carrefour</option>
+                        <option value="step_hearth">Coeur</option>
+                        <option value="step_thread">Fil</option>
+                        <option value="step_trial">Epreuve</option>
+                    </select>
+                </div>
+
+            </div></div>
+        </div>
+
+        <div class="sheet-grid-cell">
+            <div class="sheet-category sheet-right-tab"><h4>Domaines</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border-right"><div class="sheet-content-right">
+
+                <div class="sheet-input-row">
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-my-row-header sheet-domain-row">
+                            <div class="sheet-my-left-header-cell"></div>
+                            <div class="sheet-my-header-cell">Basse Magie</div>
+                            <div class="sheet-my-header-cell">Haute Magie</div>
+                            <div class="sheet-my-header-cell">???</div>
+                        </div>
+                        <div class="sheet-my-row sheet-domain-row">
+                            <div class="sheet-my-left-header-cell">Domaine</div>
+                            <div class="sheet-my-cell">
+                                <input class="sheet-input-round sheet-input-black"
+                                       name="attr_magFirstCircle" type="number" value="0">
+                            </div>
+                            <div class="sheet-my-cell">
+                                <input class="sheet-input-round sheet-input-white"
+                                       name="attr_magSecondCircle" type="number" value="0">
+                            </div>
+                            <div class="sheet-my-cell">
+                                <input class="sheet-input-round sheet-input-gold"
+                                       name="attr_magThirdCircle" type="number" value="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div></div>
+        </div>
+
+    </div>
+
+    <div class="sheet-grid-container-1">
+        <div class="sheet-grid-cell">
+            <div class="sheet-category"><div class="sheet-left-tri"></div><h4>Sorts</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border"><div class="sheet-content">
+
+                <fieldset class="repeating_spells">
+                    <div class="sheet-repeating-container">
+                        <div class="sheet-grid-container-2 sheet-repeating-right-button-template">
+                            <div>
+                                <div class="sheet-input-row">
+                                    <span>Nom:</span>
+                                    <input type="text" name="attr_magSpellName"/>
+                                </div>
+
+                                <div class="sheet-input-row">
+                                    <span>Ka:</span>
+                                    <select name="attr_magSpellKa">
+                                        <option value> -- </option>
+                                        <option value="@{kaFire}">Feu</option>
+                                        <option value="@{kaWater}">Eau</option>
+                                        <option value="@{kaAir}">Air</option>
+                                        <option value="@{kaEarth}">Terre</option>
+                                        <option value="@{kaMoon}">Lune</option>
+                                    </select>
+                                </div>
+                                <div class="sheet-input-row">
+                                    <span>Degré:</span>
+                                    <input type="number" name="attr_magSpellDegree" value="0">
+                                </div>
+                            </div>
+                            <div class="sheet-flex-center">
+                                <input type="hidden" name="attr_magSpellRollValue" value="(@{magSpellKa}+@{magSpellCircle}-@{magSpellDegree})"/>
+                                <button type="roll"
+                                        value="&{template:standardroll} {{rollName=@{magSpellName}}} {{roll=[[1d100]]}} {{difficulty=[[@{magSpellRollValue}*10]]}}"
+                                        name="roll_magSpellRoll"></button>
+                            </div>
+                        </div>
+
+
+                        <div class="sheet-input-row">
+                            <span>Cercle:</span>
+                            <select name="attr_magSpellCircle">
+                                <option value> -- </option>
+                                <option value="@{magFirstCircle}">Basse Magie</option>
+                                <option value="@{magSecondCircle}">Haute Magie</option>
+                                <option value="@{magThirdCircle}">???</option>
+                            </select>
+                            <span>Mémo:</span>
+                            <select name="attr_magSpellMemo">
+                                <option value> -- </option>
+                                <option value="memo_focus">Focus</option>
+                                <option value="memo_pentacle">Pentacle</option>
+                                <option value="memo_tatoo">Tatouage</option>
+                            </select>
+                        </div>
+
+                        <div class="sheet-input-row">
+                            <span>Voie:</span>
+                            <select name="attr_magSpellPath">
+                                <option value> -- </option>
+                                <option value="path_sinuous_way">Sentier Sinueux</option>
+                                <option value="path_elevation_spirale">Spirale d'Elévation</option>
+                                <option value="path_mislaying_principles">Principes Egarants</option>
+                                <option value="path_schematic_labyrinth">Labyrinthe Schématique</option>
+                                <option value="path_soul_maze">Dédale de l'Ame</option>
+                            </select>
+                            <span>Etape:</span>
+                            <select name="attr_magSpellStep">
+                                <option value> -- </option>
+                                <option value="step_porch">Porche</option>
+                                <option value="step_crossroad">Carrefour</option>
+                                <option value="step_hearth">Coeur</option>
+                                <option value="step_thread">Fil</option>
+                                <option value="step_trial">Epreuve</option>
+                            </select>
+                        </div>
+
+                        <div class="sheet-input-row">
+                            <span>Portée:</span>
+                            <input type="text" name="attr_magSpellRange"/>
+                        </div>
+
+                        <div class="sheet-input-row">
+                            <span>Durée:</span>
+                            <input type="text" name="attr_magSpellDuration"/>
+                        </div>
+
+                        <div class="sheet-input-row">
+                            <span>Résumé:</span>
+                            <textarea name="attr_magSpellSummary"></textarea>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+            </div></div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- End Magic --><!-- Alchemy -->
+<div class="sheet-tab3 sheet-tab-content">
+    <h2 class="sheet-title"><span>Alchimie</span></h2>
+
+    <div class="sheet-grid-container-2">
+        <div class="sheet-grid-cell">
+
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Infos</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+
+                <div class="sheet-input-row">
+                    <span>Voie:</span>
+                    <select name="attr_alchPath">
+                        <option value> -- </option>
+                        <option value="path_short">Voie Brève</option>
+                        <option value="path_dry">Voie Sèche</option>
+                        <option value="path_humid">Voie Humide</option>
+                        <option value="path_royal">Voie Royale</option>
+                    </select>
+                </div>
+
+            </div></div>
+
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Domaines</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+
+                <div class="sheet-input-row">
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-my-row-header sheet-domain-row">
+                            <div class="sheet-my-left-header-cell">Oeuvre:</div>
+                            <div class="sheet-my-header-cell">au Noir</div>
+                            <div class="sheet-my-header-cell">au Blanc</div>
+                            <div class="sheet-my-header-cell">au Rouge</div>
+                        </div>
+                        <div class="sheet-my-row sheet-domain-row">
+                            <div class="sheet-my-left-header-cell">Domaine</div>
+                            <div class="sheet-my-cell">
+                                <input class="sheet-input-round sheet-input-black"
+                                       name="attr_alchFirstCircle" type="number" value="0"></div>
+                            <div class="sheet-my-cell">
+                                <input class="sheet-input-round sheet-input-white"
+                                       name="attr_alchSecondCircle" type="number" value="0">
+                            </div>
+                            <div class="sheet-my-cell">
+                                <input class="sheet-input-round sheet-input-red"
+                                       name="attr_alchThirdCircle" type="number" value="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="hidden" name="attr_alchCircles"
+                       value="(@{alchFirstCircle}+@{alchSecondCircle}+@{alchThirdCircle})"/>
+
+            </div></div>
+
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>les p'tites Popos</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+
+                <div class="sheet-my-table">
+                    <div class="sheet-my-row sheet-popo-row sheet-my-row-header">
+                                <p class="sheet-my-header-cell">Nom</p>
+                                <p class="sheet-my-header-cell">Quantité</p>
+                            </div>
+                    <fieldset class="repeating_popoInv">
+                        <div class="sheet-my-row sheet-popo-row">
+                            <p class="sheet-my-cell"><input type="text" name="attr_popoName"/></p>
+                            <p class="sheet-my-cell"><input type="number" name="attr_popoQuantity"/></p>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div></div>
+        </div>
+
+        <div class="sheet-grid-cell">
+            <div class="sheet-category sheet-right-tab"><h4>Constructs</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border-right"><div class="sheet-content-right">
+
+                <div class="sheet-input-row">
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-my-row-header sheet-construct-row">
+                            <div class="sheet-my-left-header-cell"></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/Zd9LJd7/fire.png" alt="fire">
+                                <span>Feu</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/XkcvCqT/water.png" alt="water">
+                                <span>Eau</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/YDsjhLp/air.png" alt="air">
+                                <span>Air</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/SnGSYr3/earth.png" alt="earth">
+                                <span>Terre</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/rmx5cZH/moon.png" alt="moon">
+                                <span>Lune</span></div>
+                            <div class="sheet-my-header-cell sheet-text-only">Niveau</div>
+                        </div>
+                        <div class="sheet-my-row sheet-construct-row">
+                            <div class="sheet-my-left-header-cell">Athanor (Poudre)</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAthanorFire" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAthanorWater" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAthanorAir" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAthanorEarth" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAthanorMoon" value="0"></div>
+                            <div class="sheet-my-cell">
+                                <select name="attr_alchToolAthanorlevel">
+                                    <option value>--</option>
+                                    <option value="black">Noir</option>
+                                    <option value="white">Blanc</option>
+                                    <option value="red">Rouge</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="sheet-my-row sheet-construct-row">
+                            <div class="sheet-my-left-header-cell">Cornue (Ambre)</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolRetortFire" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolRetortWater" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolRetortAir" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolRetortEarth" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolRetortMoon" value="0"></div>
+                            <div class="sheet-my-cell">
+                                <select name="attr_alchToolRetorlevel">
+                                    <option value>--</option>
+                                    <option value="black">Noir</option>
+                                    <option value="white">Blanc</option>
+                                    <option value="red">Rouge</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="sheet-my-row sheet-construct-row">
+                            <div class="sheet-my-left-header-cell">Creuset (Métal)</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolCrucibleFire" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolCrucibleWater" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolCrucibleAir" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolCrucibleEarth" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolCrucibleMoon" value="0"></div>
+                            <div class="sheet-my-cell">
+                                <select name="attr_alchToolCruciblelevel">
+                                    <option value>--</option>
+                                    <option value="black">Noir</option>
+                                    <option value="white">Blanc</option>
+                                    <option value="red">Rouge</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="sheet-my-row sheet-construct-row">
+                            <div class="sheet-my-left-header-cell">Aludel (Vapeur)</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAludelFire" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAludelWater" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAludelAir" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAludelEarth" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAludelMoon" value="0"></div>
+                            <div class="sheet-my-cell">
+                                <select name="attr_alchToolAludellevel">
+                                    <option value>--</option>
+                                    <option value="black">Noir</option>
+                                    <option value="white">Blanc</option>
+                                    <option value="red">Rouge</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="sheet-my-row sheet-construct-row">
+                            <div class="sheet-my-left-header-cell">Alambic (Liqueur)</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAlembicFire" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAlembicWater" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAlembicAir" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAlembicEarth" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAlembicMoon" value="0"></div>
+                            <div class="sheet-my-cell">
+                                <select name="attr_alchToolAlembiclevel">
+                                    <option value>--</option>
+                                    <option value="black">Noir</option>
+                                    <option value="white">Blanc</option>
+                                    <option value="red">Rouge</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div></div>
+
+            <div class="sheet-category sheet-right-tab"><h4>Materia Primae</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border-right"><div class="sheet-content-right">
+
+                <div class="sheet-input-row">
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-my-row-header sheet-materia-row">
+                            <div class="sheet-my-left-header-cell"></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/Zd9LJd7/fire.png" alt="fire">
+                                <span>Feu</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/XkcvCqT/water.png" alt="water">
+                                <span>Eau</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/YDsjhLp/air.png" alt="air">
+                                <span>Air</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/SnGSYr3/earth.png" alt="earth">
+                                <span>Terre</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/rmx5cZH/moon.png" alt="moon">
+                                <span>Lune</span></div>
+                        </div>
+                        <div class="sheet-my-row sheet-materia-row">
+                            <div class="sheet-my-left-header-cell">Actuel</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimFire" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimWater" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimAir" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimEarth" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimMoon" value="0"></div>
+                        </div>
+                        <div class="sheet-my-row sheet-materia-row">
+                            <div class="sheet-my-left-header-cell">Extra</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimFireExtra" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimWaterExtra" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimAirExtra" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimEarthExtra" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimMoonExtra" value="0"></div>
+                        </div>
+                        <div class="sheet-my-row sheet-materia-row">
+                            <div class="sheet-my-left-header-cell">Max</div>
+                            <div class="sheet-my-cell">
+                                <input name="attr_alchMatPrimFire_max" type="number" disabled="true"
+                                       value="(@{kaFire}+@{alchCircles}+@{alchMatPrimFireExtra})"/></div>
+                            <div class="sheet-my-cell">
+                                <input name="attr_alchMatPrimWater_max" type="number" disabled="true"
+                                       value="(@{kaWater}+@{alchCircles}+@{alchMatPrimWaterExtra})"/></div>
+                            <div class="sheet-my-cell">
+                                <input name="attr_alchMatPrimAir_max" type="number" disabled="true"
+                                       value="(@{kaAir}+@{alchCircles}+@{alchMatPrimAirExtra})"/></div>
+                            <div class="sheet-my-cell">
+                                <input name="attr_alchMatPrimEarth_max" type="number" disabled="true"
+                                       value="(@{kaEarth}+@{alchCircles}+@{alchMatPrimEarthExtra})"/></div>
+                            <div class="sheet-my-cell">
+                                <input name="attr_alchMatPrimMoon_max" type="number" disabled="true"
+                                       value="(@{kaMoon}+@{alchCircles}+@{alchMatPrimMoonExtra})"/></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div></div>
+        </div>
+    </div>
+
+    <div class="sheet-grid-container-1">
+        <div class="sheet-grid-cell">
+            <div class="sheet-category"><div class="sheet-left-tri"></div><h4>Recettes</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border"><div class="sheet-content">
+
+                <fieldset class="repeating_popos">
+                    <div class="sheet-repeating-container">
+
+                        <div class="sheet-grid-container-2 sheet-repeating-right-button-template">
+                            <div>
+                                <div class="sheet-input-row">
+                                    <span>Nom:</span>
+                                    <input type="text" name="attr_alchPopoName"/>
+                                </div>
+                                <div class="sheet-input-row">
+                                    <span>Ka:</span>
+                                    <select name="attr_alchPopoKa1">
+                                        <option value> -- </option>
+                                        <option value="Fire">Feu</option>
+                                        <option value="Water">Eau</option>
+                                        <option value="Air">Air</option>
+                                        <option value="Earth">Terre</option>
+                                        <option value="Moon">Lune</option>
+                                    </select>
+                                    <select name="attr_alchPopoKa2">
+                                        <option value> -- </option>
+                                        <option value="Fire">Feu</option>
+                                        <option value="Water">Eau</option>
+                                        <option value="Air">Air</option>
+                                        <option value="Earth">Terre</option>
+                                        <option value="Moon">Lune</option>
+                                    </select>
+                                </div>
+                                <div class="sheet-input-row">
+                                    <span>Degré:</span>
+                                    <input type="number" value="0" name="attr_alchPopoDegree">
+                                </div>
+                            </div>
+                            <div class="sheet-flex-center">
+                                <input type="hidden" name="attr_alchPopoRollValue" value="(0+@{alchPopoCircle}-@{alchPopoDegree})"/>
+                                <button type="roll"
+                                        value="&{template:standardroll} {{rollName=@{alchPopoName}}} {{roll=[[1d100]]}} {{difficulty=[[@{alchPopoRollValue}*10]]}}"
+                                        name="roll_alchPopoRoll"></button>
+                            </div>
+                        </div>
+                        <div class="sheet-input-row">
+                            <span>Cercle:</span>
+                            <select name="attr_alchPopoCircle">
+                                <option value> -- </option>
+                                <option value="@{alchFirstCircle}">Oeuvre au Noir</option>
+                                <option value="@{alchSecondCircle}">Oeuvre au Blanc</option>
+                                <option value="@{alchThirdCircle}">Oeuvre au Rouge</option>
+                            </select>
+                            <span class="sheet-spacer"></span>
+                            <span>Construct:</span>
+                            <select name="attr_alchPopoConstruct">
+                                <option value=> -- </option>
+                                <option value="Athanor">Athanor</option>
+                                <option value="Retort">Cornue</option>
+                                <option value="Crucible">Creuset</option>
+                                <option value="Aludel">Aludel</option>
+                                <option value="Alembic">Alambic</option>
+                            </select>
+                        </div>
+
+                        <div class="sheet-input-row">
+                            <span>Portée:</span>
+                            <input type="text" name="attr_alchPopoRange"/>
+                        </div>
+
+                        <div class="sheet-input-row">
+                            <span>Durée:</span>
+                            <input type="text" name="attr_alchPopoDuration"/>
+                        </div>
+
+                        <div class="sheet-input-row">
+                            <span>Mémo:</span>
+                            <select name="attr_alchPopoMemo">
+                                <option value> -- </option>
+                                <option value="memo_focus">Focus</option>
+                                <option value="memo_pentacle">Pentacle</option>
+                                <option value="memo_tatoo">Tatouage</option>
+                            </select>
+                        </div>
+                        <div class="sheet-input-row">
+                            <span>Résumé:</span>
+                            <textarea name="attr_kabInvSummary"></textarea>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+            </div></div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- End Alchemy --><!-- Kabbale -->
+<div class="sheet-tab4 sheet-tab-content">
+
+    <h2 class="sheet-title"><span>Kabbales</span></h2>
+
+    <div class="sheet-grid-container-2">
+        <div class="sheet-grid-cell">
+
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Infos</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+
+                    <div class="sheet-input-row">
+                        <span>Monde:</span>
+                        <select name="attr_kabWorld">
+                            <option value> -- </option>
+                            <option value="kabSohar">Sohar</option>
+                            <option value="kabZakai">Zakaï</option>
+                            <option value="kabPachad">Pachad</option>
+                            <option value="kabAresh">Aresh</option>
+                            <option value="kabMeborack">Meborack</option>
+                        </select>
+                    </div>
+
+            </div></div>
+
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Ordonnances</h4></div>
+            <div class="sheet-border-left sheet-flex-grow-full"><div class="sheet-content-left">
+
+                <div class="sheet-input-row">
+                    <span>Ordonnances:</span>
+                    <input type="hidden" name="attr_kabOrdoBonusVal" value="0" />
+                    <input name="attr_kabOrdoBonus" type="number" value="@{kabOrdoBonusVal}" disabled="true" />
+                </div>
+
+                <div class="sheet-my-table sheet-ruling-fields">
+                    <div class="sheet-my-row sheet-ordos-row sheet-my-row-header">
+                        <p class="sheet-my-header-cell"></p>
+                        <p class="sheet-my-header-cell">Règle</p>
+                        <p class="sheet-my-header-cell">Rompu?</p>
+                    </div>
+                    <fieldset class="repeating_rulings">
+                        <div class="sheet-my-row sheet-ordos-row">
+                            <p class="sheet-my-cell"><span class="sheet-counter"></span></p>
+                            <p class="sheet-my-cell"><input type="text" name="attr_rule"/></p>
+                            <p class="sheet-my-cell"><input type="checkbox" name="attr_ruleBreak"/></p>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div></div>
+        </div>
+
+        <div class="sheet-content-center sheet-grid-cell">
+            <div class="sheet-category sheet-right-tab"><h4>Kabbale</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border-right sheet-flex-grow-full"><div class="sheet-content-right sheet-kabbale-container">
+
+                <img class="sheet-kabbale-img" src="https://i.ibb.co/n8LPgCr/kabbale.png" alt="kabbale">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-kether sheet-input-red"
+                       name="attr_kabKether" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-binah sheet-input-red"
+                       name="attr_kabBinah" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-chokmah sheet-input-red"
+                       name="attr_kabChokmah" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-geburah sheet-input-white"
+                       name="attr_kabGeburah" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-chesed sheet-input-white"
+                       name="attr_kabChesed" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-tiphereth sheet-input-white"
+                       name="attr_kabTiphereth" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-hod sheet-input-black"
+                       name="attr_kabHod" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-netzach sheet-input-black"
+                       name="attr_kabNetzach" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-yesod sheet-input-black"
+                       name="attr_kabYesod" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-malkuth sheet-input-black"
+                       name="attr_kabMalkuth" type="number" value="0">
+
+            </div></div>
+        </div>
+    </div>
+
+    <div class="sheet-grid-container-1">
+        <div class="sheet-grid-cell">
+            <div class="sheet-category"><div class="sheet-left-tri"></div><h4>Invocations</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border"><div class="sheet-content">
+
+            <fieldset class="repeating_invocations">
+                <div class="sheet-repeating-container">
+
+                    <div class="sheet-grid-container-2 sheet-repeating-right-button-template">
+                        <div>
+                            <div class="sheet-input-row">
+                                <span>Nom:</span>
+                                <input type="text" name="attr_kabInvName"/>
+                            </div>
+
+                            <div class="sheet-input-row">
+                                <span>Ka:</span>
+                                <select name="attr_kabInvKa">
+                                    <option value> -- </option>
+                                    <option value="@{kaFire}">Feu</option>
+                                    <option value="@{kaWater}">Eau</option>
+                                    <option value="@{kaAir}">Air</option>
+                                    <option value="@{kaEarth}">Terre</option>
+                                    <option value="@{kaMoon}">Lune</option>
+                                </select>
+                            </div>
+                            <div class="sheet-input-row">
+                                <span>Degré:</span>
+                                <input type="number" value="0" name="attr_kabInvDegree">
+                            </div>
+                        </div>
+                        <div class="sheet-flex-center">
+                            <input type="hidden" name="attr_kabInvRollValue" value="(@{kabInvKa}+@{kabInvSephirah})" />
+                            <button type="roll"
+                                        value="&{template:standardroll} {{rollName=@{kabInvName}}} {{roll=[[1d100]]}} {{difficulty=[[@{kabInvRollValue}*10]]}}"
+                                        name="roll_kabInvRoll"></button>
+                        </div>
+                    </div>
+
+
+                    <div class="sheet-input-row">
+                        <span>Monde:</span>
+                        <select name="attr_kabInvWorld">
+                            <option value> -- </option>
+                            <option value="kabSohar">Sohar</option>
+                            <option value="kabZakai">Zakaï</option>
+                            <option value="kabPachad">Pachad</option>
+                            <option value="kabAresh">Aresh</option>
+                            <option value="kabMeborack">Meborack</option>
+                        </select>
+                        <span>Séphirah:</span>
+                        <select name="attr_kabInvSephirah">
+                            <option value> -- </option>
+                            <option value="@{kabMalkuth}">Malkuth</option>
+                            <option value="@{kabYesod}">Yesod</option>
+                            <option value="@{kabHod}">Hod</option>
+                            <option value="@{kabNetzach}">Netzack</option>
+                            <option value="@{kabTiphereth}">Tiphereth</option>
+                            <option value="@{kabGeburah}">Gerubah</option>
+                            <option value="@{kabChesed}">Chesed</option>
+                            <option value="@{kabBinah}">Binah</option>
+                            <option value="@{kabChokmah}">Chokmah</option>
+                            <option value="@{kabKether}">Kether</option>
+                        </select>
+                    </div>
+
+                    <div class="sheet-input-row">
+                        <span>Portée:</span>
+                        <input type="text" name="attr_kabInvRange"/>
+                    </div>
+
+                    <div class="sheet-input-row">
+                        <span>Durée:</span>
+                        <input type="text" name="attr_kabInvDuration"/>
+                    </div>
+
+                    <div class="sheet-input-row">
+                        <span>Visibilité:</span>
+                        <input type="text" name="attr_kabInvVisibility"/>
+                    </div>
+
+                    <div class="sheet-input-row">
+                        <span>Mémo:</span>
+                        <select name="attr_kabInvMemo">
+                            <option value> -- </option>
+                            <option value="memo_focus">Focus</option>
+                            <option value="memo_pentacle">Pentacle</option>
+                            <option value="memo_tatoo">Tatouage</option>
+                        </select>
+                    </div>
+                    <div class="sheet-input-row">
+                        <span>Résumé:</span>
+                        <textarea name="attr_kabInvSummary"></textarea>
+                    </div>
+
+                </div>
+            </fieldset>
+
+            </div></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- End Kabbale --><!-- Equipment -->
+
+<div class="sheet-tab5 sheet-tab-content">
+    <h2 class="sheet-title"><span>Equipement</span></h2>
+
+    <div class="sheet-grid-container-2">
+        <div class="sheet-grid-cell">
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Armes/Armures</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+
+                <div class="sheet-my-table">
+                    <div class="sheet-my-row sheet-weapon-row sheet-my-row-header">
+                                <p class="sheet-my-header-cell">Objet</p>
+                                <p class="sheet-my-header-cell">Valeur</p>
+                                <p class="sheet-my-header-cell">Type</p>
+                            </div>
+                    <fieldset class="repeating_weapons">
+                        <div class="sheet-my-row sheet-weapon-row">
+                            <p class="sheet-my-cell"><input type="text" name="attr_equipName"/></p>
+                            <p class="sheet-my-cell"><input type="number" name="attr_equipValue"/></p>
+                            <p class="sheet-my-cell"><select name="attr_equipType">
+                                <option value="weapon" selected>Arme</option>
+                                <option value="armor">Armure</option>
+                            </select></p>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div></div>
+        </div>
+
+        <div class="sheet-grid-cell">
+            <div class="sheet-category sheet-right-tab"><h4>Equipement</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border-right"><div class="sheet-content-right">
+
+                <div class="sheet-my-table">
+                    <div class="sheet-my-row sheet-equipment-row sheet-my-row-header">
+                                <p class="sheet-my-header-cell">Objet</p>
+                            </div>
+                    <fieldset class="repeating_equipments">
+                        <div class="sheet-my-row sheet-equipment-row">
+                            <p class="sheet-my-cell"><input type="text" name="attr_equipName"/></p>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div></div>
+        </div>
+    </div>
+</div>
+
+<!-- End Equipment -->
+</div>
+<script type="text/worker">
+    // functions
+    const updateRulingVal = () => {
+        getSectionIDs("repeating_rulings", rullingsArray => {
+            rullingsArray = rullingsArray.map(id => `repeating_rulings_${id}_ruleBreak`);
+
+            getAttrs(rullingsArray, (values) => {
+                let bonus = 0;
+                Object.keys(values).forEach((key) => {
+                    if (values[key] === "0") {
+                        bonus += 1;
+                    }
+                });
+                setAttrs({
+                    kabOrdoBonusVal: bonus
+                })
+            })
+        });
+    };
+
+    const updateMetamorphosisVal = () => {
+        getSectionIDs("repeating_metamorphosis", metamorphosisArray => {
+            metamorphosisArray = metamorphosisArray.map(id => `repeating_metamorphosis_${id}_metaPerm`);
+
+            getAttrs(metamorphosisArray, (values) => {
+                let bonus = 0;
+                Object.keys(values).forEach((key) => {
+                    if (values[key] === "0") {
+                        bonus += 1;
+                    }
+                });
+                setAttrs({
+                    metaBonusVal: bonus
+                })
+            })
+        });
+    };
+
+    // setup page on open
+    on("sheet:opened", function() {
+        console.log("Sheet opened, JS is running");
+        // set up character elements section
+        getSectionIDs("repeating_metamorphosis", metamorphosisArray => {
+            metamorphosisArray = metamorphosisArray.map(id => `repeating_metamorphosis_${id}_metaPerm`);
+
+            getAttrs(metamorphosisArray, (values) => {
+                let bonus = 0;
+                Object.keys(values).forEach((key) => {
+                    if (values[key] === "0") {
+                        bonus += 1;
+                    }
+                });
+                setAttrs({
+                    metaBonusVal: bonus
+                });
+            });
+        });
+        // set up veil
+        getAttrs(["kaMoon"], (values) => {
+           if (values.kaMoon >= 10) {
+               setAttrs({veilValue: 2})
+           } else if (values.kaMoon >= 5) {
+               setAttrs({veilValue: 1})
+           } else {
+               setAttrs({veilValue: 0})
+           }
+        });
+
+        // set up damage Bonus
+        getAttrs(["kaFire"], (values) => {
+           if (values.kaFire >= 10) {
+               setAttrs({damageBonusValue: 2})
+           } else if (values.kaFire >= 5) {
+               setAttrs({damageBonusValue: 1})
+           } else {
+               setAttrs({damageBonusValue: 0})
+           }
+        });
+
+        // set up Metamorphosis
+        updateMetamorphosisVal();
+
+        // set up Kabbale elements section
+        updateRulingVal();
+
+    });
+
+    // Change Page
+    const buttonList = ["tab1","tab2","tab3", "tab4", "tab5"];
+    buttonList.forEach(button => {
+        on(`clicked:${button}`, () => {
+            setAttrs({
+                sheetTab: button
+            });
+        });
+    });
+
+    // Character Page
+    on("remove:repeating_metamorphosis change:repeating_metamorphosis", function(eventInfo) {
+        updateMetamorphosisVal();
+    });
+
+    on("change:kaEarth", function(eventInfo) {
+        getAttrs(["kaEarth"], (values) => {
+           if (parseInt(values.kaEarth) >= 10) {
+               setAttrs({
+                   optionLifePhysical: "2"
+               })
+           } else if (parseInt(values.kaEarth) >= 5) {
+               setAttrs({
+                   optionLifePhysical: "1"
+               })
+           } else {
+               setAttrs({
+                   optionLifePhysical: "0"
+               })
+           }
+        });
+    });
+
+    // Magic Page
+
+    // Alchemy Page
+    const updatePopo = (popoId) => {
+        getAttrs([`${popoId}_alchPopoKa1`, `${popoId}_alchPopoKa2`, `${popoId}_alchPopoConstruct`], (values) => {
+            let construct;
+            let ka1;
+            let ka2;
+            Object.keys(values).forEach(key => {
+                if(key.includes("alchPopoKa1")) {
+                    ka1 = values[key]
+                }
+                else if(key.includes("alchPopoKa2")) {
+                    ka2 = values[key]
+                }
+                else {
+                    construct = values[key]
+                }
+            });
+            const tool1 = `alchTool${construct}${ka1}`;
+            const tool2 = `alchTool${construct}${ka2}`;
+
+            getAttrs([tool1, tool2], (toolValues) => {
+                let arr = Object.values(toolValues).map(val => parseInt(val));
+                let min = Math.min(...arr);
+                if(min === Infinity) {
+                    min = 0;
+                }
+                const rollValueId = `${popoId}_alchPopoRollValue`;
+                let updatedPopo = {};
+                updatedPopo[rollValueId] = `(${min}+@{alchPopoCircle}-@{alchPopoDegree})`;
+                setAttrs(updatedPopo);
+            });
+
+        });
+    };
+
+    on("change:repeating_popos", (eventInfo) => {
+        updatePopo(eventInfo.triggerName);
+    });
+
+    const tools = ["Athanor", "Retort", "Crucible", "Aludel", "Alembic"];
+    const elements = ["Fire", "Water", "Air", "Earth", "Moon"];
+
+    tools.forEach(tool => {
+       elements.forEach(element => {
+           on(`change:alchTool${tool}${element}`, (eventInfo) => {
+            getSectionIDs("popos", (ids) => {
+                ids.forEach(id => {
+                    updatePopo(`repeating_popos_${id}`);
+                })
+            })
+        })
+       })
+    });
+
+    // Kabbale Page
+    on("remove:repeating_rulings change:repeating_rulings", (eventInfo) => {
+        updateRulingVal();
+    });
+
+    on("change:repeating_invocations:kabInvWorld", (eventInfo) => {
+        getAttrs(["kabWorld"], (values) => {
+            if (values.kabWorld === eventInfo.newValue) {
+                setAttrs({
+                    "repeating_invocations_kabInvRollValue" : "(@{kabInvKa}+@{kabInvSephirah}+@{kabOrdoBonusVal})"
+                });
+            }
+            else {
+                setAttrs({
+                    "repeating_invocations_kabInvRollValue" : "(@{kabInvKa}+@{kabInvSephirah})"
+                });
+            }
+        });
+    });
+
+    // Equipement page
+    on("change:repeating_weapons", (eventInfo) => {
+        console.log(eventInfo);
+    });
+</script><rolltemplate class="sheet-rolltemplate-standardroll">
+<!--  regular roll -->
+    <div class="sheet-template-container">
+
+        <table>
+            <tr>
+                <caption>{{rollName}}</caption>
+            </tr>
+            <tr>
+                <td><span>Jet: </span></td><td>{{roll}}</td>
+            </tr>
+            <tr>
+                <td><span>Seuil: </span></td><td>{{difficulty}}</td>
+            </tr>
+            <tr>
+                <td colspan=2>
+                    {{#rollGreater() roll difficulty}}
+                        <span class="sheet-failure">Echec</span>
+                    {{/rollGreater() roll difficulty}}
+                    {{#^rollGreater() roll difficulty}}
+                        <span class="sheet-success">Succès</span>
+                    {{/^rollGreater() roll difficulty}}
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+</rolltemplate></body>
+</html>

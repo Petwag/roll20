@@ -1,0 +1,187 @@
+<!-- Kabbale -->
+<div class="sheet-tab4 sheet-tab-content">
+
+    <h2 class="sheet-title"><span>Kabbales</span></h2>
+
+    <div class="sheet-grid-container-2">
+        <div class="sheet-grid-cell">
+
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Infos</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+
+                    <div class="sheet-input-row">
+                        <span>Monde:</span>
+                        <select name="attr_kabWorld">
+                            <option value> -- </option>
+                            <option value="kabSohar">Sohar</option>
+                            <option value="kabZakai">Zakaï</option>
+                            <option value="kabPachad">Pachad</option>
+                            <option value="kabAresh">Aresh</option>
+                            <option value="kabMeborack">Meborack</option>
+                        </select>
+                    </div>
+
+            </div></div>
+
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Ordonnances</h4></div>
+            <div class="sheet-border-left sheet-flex-grow-full"><div class="sheet-content-left">
+
+                <div class="sheet-input-row">
+                    <span>Ordonnances:</span>
+                    <input type="hidden" name="attr_kabOrdoBonusVal" value="0" />
+                    <input name="attr_kabOrdoBonus" type="number" value="@{kabOrdoBonusVal}" disabled="true" />
+                </div>
+
+                <div class="sheet-my-table sheet-ruling-fields">
+                    <div class="sheet-my-row sheet-ordos-row sheet-my-row-header">
+                        <p class="sheet-my-header-cell"></p>
+                        <p class="sheet-my-header-cell">Règle</p>
+                        <p class="sheet-my-header-cell">Rompu?</p>
+                    </div>
+                    <fieldset class="repeating_rulings">
+                        <div class="sheet-my-row sheet-ordos-row">
+                            <p class="sheet-my-cell"><span class="sheet-counter"></span></p>
+                            <p class="sheet-my-cell"><input type="text" name="attr_rule"/></p>
+                            <p class="sheet-my-cell"><input type="checkbox" name="attr_ruleBreak"/></p>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div></div>
+        </div>
+
+        <div class="sheet-content-center sheet-grid-cell">
+            <div class="sheet-category sheet-right-tab"><h4>Kabbale</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border-right sheet-flex-grow-full"><div class="sheet-content-right sheet-kabbale-container">
+
+                <img class="sheet-kabbale-img" src="https://i.ibb.co/n8LPgCr/kabbale.png" alt="kabbale">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-kether sheet-input-red"
+                       name="attr_kabKether" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-binah sheet-input-red"
+                       name="attr_kabBinah" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-chokmah sheet-input-red"
+                       name="attr_kabChokmah" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-geburah sheet-input-white"
+                       name="attr_kabGeburah" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-chesed sheet-input-white"
+                       name="attr_kabChesed" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-tiphereth sheet-input-white"
+                       name="attr_kabTiphereth" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-hod sheet-input-black"
+                       name="attr_kabHod" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-netzach sheet-input-black"
+                       name="attr_kabNetzach" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-yesod sheet-input-black"
+                       name="attr_kabYesod" type="number" value="0">
+                <input class="sheet-kabbale-input sheet-input-round sheet-kabbale-input-malkuth sheet-input-black"
+                       name="attr_kabMalkuth" type="number" value="0">
+
+            </div></div>
+        </div>
+    </div>
+
+    <div class="sheet-grid-container-1">
+        <div class="sheet-grid-cell">
+            <div class="sheet-category"><div class="sheet-left-tri"></div><h4>Invocations</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border"><div class="sheet-content">
+
+            <fieldset class="repeating_invocations">
+                <div class="sheet-repeating-container">
+
+                    <div class="sheet-grid-container-2 sheet-repeating-right-button-template">
+                        <div>
+                            <div class="sheet-input-row">
+                                <span>Nom:</span>
+                                <input type="text" name="attr_kabInvName"/>
+                            </div>
+
+                            <div class="sheet-input-row">
+                                <span>Ka:</span>
+                                <select name="attr_kabInvKa">
+                                    <option value> -- </option>
+                                    <option value="@{kaFire}">Feu</option>
+                                    <option value="@{kaWater}">Eau</option>
+                                    <option value="@{kaAir}">Air</option>
+                                    <option value="@{kaEarth}">Terre</option>
+                                    <option value="@{kaMoon}">Lune</option>
+                                </select>
+                            </div>
+                            <div class="sheet-input-row">
+                                <span>Degré:</span>
+                                <input type="number" value="0" name="attr_kabInvDegree">
+                            </div>
+                        </div>
+                        <div class="sheet-flex-center">
+                            <input type="hidden" name="attr_kabInvRollValue" value="(@{kabInvKa}+@{kabInvSephirah})" />
+                            <button type="roll"
+                                        value="&{template:standardroll} {{rollName=@{kabInvName}}} {{roll=[[1d100]]}} {{difficulty=[[@{kabInvRollValue}*10]]}}"
+                                        name="roll_kabInvRoll"></button>
+                        </div>
+                    </div>
+
+
+                    <div class="sheet-input-row">
+                        <span>Monde:</span>
+                        <select name="attr_kabInvWorld">
+                            <option value> -- </option>
+                            <option value="kabSohar">Sohar</option>
+                            <option value="kabZakai">Zakaï</option>
+                            <option value="kabPachad">Pachad</option>
+                            <option value="kabAresh">Aresh</option>
+                            <option value="kabMeborack">Meborack</option>
+                        </select>
+                        <span>Séphirah:</span>
+                        <select name="attr_kabInvSephirah">
+                            <option value> -- </option>
+                            <option value="@{kabMalkuth}">Malkuth</option>
+                            <option value="@{kabYesod}">Yesod</option>
+                            <option value="@{kabHod}">Hod</option>
+                            <option value="@{kabNetzach}">Netzack</option>
+                            <option value="@{kabTiphereth}">Tiphereth</option>
+                            <option value="@{kabGeburah}">Gerubah</option>
+                            <option value="@{kabChesed}">Chesed</option>
+                            <option value="@{kabBinah}">Binah</option>
+                            <option value="@{kabChokmah}">Chokmah</option>
+                            <option value="@{kabKether}">Kether</option>
+                        </select>
+                    </div>
+
+                    <div class="sheet-input-row">
+                        <span>Portée:</span>
+                        <input type="text" name="attr_kabInvRange"/>
+                    </div>
+
+                    <div class="sheet-input-row">
+                        <span>Durée:</span>
+                        <input type="text" name="attr_kabInvDuration"/>
+                    </div>
+
+                    <div class="sheet-input-row">
+                        <span>Visibilité:</span>
+                        <input type="text" name="attr_kabInvVisibility"/>
+                    </div>
+
+                    <div class="sheet-input-row">
+                        <span>Mémo:</span>
+                        <select name="attr_kabInvMemo">
+                            <option value> -- </option>
+                            <option value="memo_focus">Focus</option>
+                            <option value="memo_pentacle">Pentacle</option>
+                            <option value="memo_tatoo">Tatouage</option>
+                        </select>
+                    </div>
+                    <div class="sheet-input-row">
+                        <span>Résumé:</span>
+                        <textarea name="attr_kabInvSummary"></textarea>
+                    </div>
+
+                </div>
+            </fieldset>
+
+            </div></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- End Kabbale -->

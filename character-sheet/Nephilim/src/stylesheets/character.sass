@@ -1,0 +1,57 @@
+/* Page Character */
+
+table.sheet-ka-table
+  th
+    font-weight: 900
+    font-size: 1.5em
+    padding: 10px 0
+    border-right: 10px
+
+div.sheet-metamorphosis-fields
+  counter-reset: sheet-rep-metamorphosis
+
+  .sheet-counter::before
+    counter-increment: sheet-rep-metamorphosis
+    content: counter(sheet-rep-metamorphosis)
+
+input[type="checkbox"]
+  &.sheet-nospace
+    margin-left: 0
+    margin-right: 0
+
+  &.sheet-leftspace
+    margin-right: 0
+
+div.sheet-my-table
+  .sheet-pentacle-row
+    grid-template-columns: 25% 15% 15% 15% 15% 15%
+
+  .sheet-metamorphosis-row
+    grid-template-columns: 5% 80% 15%
+
+  .sheet-skill-row
+    grid-template-columns: 70% 20% 10%
+
+  .sheet-life-row
+    grid-template-columns: 31% 23% 23% 23%
+
+  .sheet-sumweapon-row
+    grid-template-columns: 80% 20%
+
+.sheet-check-hp
+  display: flex
+
+.sheet-life-optional-1, .sheet-life-optional-2
+    display: none
+
+.sheet-extra-life[value="1"] ~ .sheet-life-optional-1,
+.sheet-extra-life[value="2"] ~ .sheet-life-optional-1,
+.sheet-extra-life[value="2"] ~ .sheet-life-optional-2
+    display: block
+
+div.repcontainer[data-groupname="repeating_lifes"]
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 1px
+
+/* End page Character */

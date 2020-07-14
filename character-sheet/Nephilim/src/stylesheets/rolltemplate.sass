@@ -1,0 +1,38 @@
+@import "0-variables"
+
+.sheet-rolltemplate-standardroll
+  .sheet-template-container
+
+    table
+      width: 100%
+      border: 1px solid $color-headers-background
+      color: black
+      font-size: 1em
+      font-family: "Helvetica Neue", Helvetica, sans-serif
+
+      span
+        &.sheet-success
+          color: #3FB315
+          font-weight: bolder
+        &.sheet-failure
+          color: #f91615
+          font-weight: bolder
+
+    th, caption
+      background-color: $color-headers-background
+      color: $color-header-text
+      padding: 2px
+      border-bottom: 1px solid black
+      line-height: 1.6em
+      font-size: 1.2em
+      font-weight: bold
+
+    td
+      padding: 5px
+      /*border-bottom: 1px solid black*/
+
+    tr:nth-child(odd)
+      background-color: rgba(217, 217, 214,1)
+
+    tr:nth-child(even)
+      background-color: rgba(233, 233, 233,1)

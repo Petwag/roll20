@@ -1,0 +1,254 @@
+@import "0-variables"
+
+/* Utils */
+.sheet-flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+.sheet-repeating-right-button-template
+  grid-template-columns: 80% 20% !important
+
+.sheet-content-center
+  text-align: center
+
+.sheet-input-dotted
+  border: none
+  border-bottom: dotted
+
+div.sheet-input-row
+  display: flex
+  align-items: center
+  border-bottom: solid 1px $color-label
+  padding: 5px 0
+  flex-wrap: wrap
+
+  span
+    margin-right: 5px
+    font-size: x-small
+    font-weight: bold
+    color: $color-label
+
+    &.sheet-spacer
+      width: 10px
+
+  input[type="text"], select, textarea
+    flex-grow: 1
+
+  &>input[type="number"]
+    width: 50px
+
+    &.sheet-small
+      width: 25px
+
+  div.sheet-break
+    flex-basis: 100%
+    height: 0
+
+  div.sheet-my-table
+    flex-grow: 1
+
+    input[type="checkbox"]
+      margin-right: 0
+      margin-left: 0
+
+label.sheet-label
+  font-size: large
+  font-weight: bold
+
+  select, input:not(.sheet-input-round), textarea
+    width: 100%!important
+
+input.sheet-input-round
+  border-radius: 50%
+  height: 50px!important
+  width: 50px!important
+
+input.sheet-input-white
+  border-color: lightgray
+
+input.sheet-input-gold
+  border-color: gold
+
+input.sheet-input-red
+  border-color: darkred
+
+input.sheet-input-black
+  border-color: black
+
+// Inputs
+
+input.sheet-square20
+  height: 20px!important
+  width: 20px!important
+
+input.sheet-square30
+  height: 30px!important
+  width: 30px!important
+
+input.sheet-square50
+  height: 50px!important
+  width: 50px!important
+
+// Text
+.sheet-title
+  line-height: 0.5
+  text-align: center
+  margin-bottom: 20px
+  margin-top: 20px
+
+  span
+    display: inline-block
+    position: relative
+    color: $color-header-text
+
+    &:before, &:after
+      content: ""
+      position: absolute
+      height: 10px
+      border-bottom: 2px solid $color-header-text
+      border-top: 2px solid $color-header-text
+      top: 0
+      width: 100px
+
+    &:before
+      right: 100%
+      margin-right: 15px
+
+    &:after
+      left: 100%
+      margin-left: 15px
+
+
+.sheet-category
+  display: flex
+  margin: 0 5px
+
+  h4
+    background-color: $color-headers-background
+    margin: 0
+    color: $color-header-text
+    flex-grow: 1
+
+  &.sheet-left-tab
+    justify-content: flex-end
+
+  &.sheet-right-tab
+    justify-content: start
+
+  &.sheet-right-tab, &.sheet-left-tab
+    h4
+      flex-grow: 0.7
+
+  .sheet-right-tri
+    border-top: 20px solid transparent
+    border-left: 30px solid $color-headers-background
+
+  .sheet-left-tri
+    border-top: 20px solid transparent
+    border-right: 30px solid $color-headers-background
+
+// Table
+
+.sheet-my-table
+  padding: 2px
+  font-size: small
+
+  .sheet-my-row
+    display: grid
+
+  .sheet-my-row-header
+    background-color: $color-table-header
+    color: $color-table-header-text
+    padding: 3px 0
+    span
+      color: $color-table-header-text
+
+  .sheet-my-header-cell, .sheet-my-cell
+    margin: 0!important
+    text-align: center
+
+  .sheet-my-header-cell, .sheet-my-left-header-cell
+    font-size: x-small
+    font-weight: bold
+
+  .sheet-my-left-header-cell
+    margin: 0!important
+    color: $color-label
+    display: flex
+    align-items: center
+
+  .sheet-my-cell
+    input, select
+      width: 100%
+
+
+  .sheet-my-header-cell
+    &.sheet-text-only
+      display: flex
+      justify-content: center
+      align-items: center
+    img
+      height: 10px
+      vertical-align: middle
+    span
+      vertical-align: middle
+// grid classes
+
+.sheet-grid-container-1 
+    display: grid
+    grid-template-columns: 1fr
+    grid-auto-rows: auto
+
+.sheet-grid-container-2 
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-auto-rows: auto
+
+.sheet-grid-container-3 
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-auto-rows: auto
+
+.sheet-full-3 
+    grid-column-start: 1
+    grid-column-end: 4
+
+.sheet-full-4 
+    grid-column-start: 1
+    grid-column-end: 5
+
+.sheet-grid-cell
+  display: flex
+  flex-direction: column
+
+.sheet-border-right, .sheet-border-left, .sheet-border
+  background-image: linear-gradient($color-headers-background, transparent), linear-gradient($color-headers-background, transparent)
+  border-top: 2px solid $color-headers-background
+  margin: 0 5px 10px 5px
+
+  &.sheet-flex-grow-full
+    flex-grow: 1
+
+.sheet-content-left, .sheet-content-right, .sheet-content
+  background-color: $color-content-container
+  overflow: auto
+  margin: 0 2px
+  height: 100%
+  padding: 15px
+
+.sheet-content-right, .sheet-border-right
+  border-top-right-radius: 20px
+
+.sheet-content-left, .sheet-border-left
+  border-top-left-radius: 20px
+
+
+// Repeating fields
+
+.sheet-repeating-container
+  border: solid
+  padding: 5px
+
+  select, input:not(.sheet-input-round)
+    width: auto!important

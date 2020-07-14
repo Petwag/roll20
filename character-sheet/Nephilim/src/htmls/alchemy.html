@@ -1,0 +1,339 @@
+<!-- Alchemy -->
+<div class="sheet-tab3 sheet-tab-content">
+    <h2 class="sheet-title"><span>Alchimie</span></h2>
+
+    <div class="sheet-grid-container-2">
+        <div class="sheet-grid-cell">
+
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Infos</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+
+                <div class="sheet-input-row">
+                    <span>Voie:</span>
+                    <select name="attr_alchPath">
+                        <option value> -- </option>
+                        <option value="path_short">Voie Brève</option>
+                        <option value="path_dry">Voie Sèche</option>
+                        <option value="path_humid">Voie Humide</option>
+                        <option value="path_royal">Voie Royale</option>
+                    </select>
+                </div>
+
+            </div></div>
+
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Domaines</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+
+                <div class="sheet-input-row">
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-my-row-header sheet-domain-row">
+                            <div class="sheet-my-left-header-cell">Oeuvre:</div>
+                            <div class="sheet-my-header-cell">au Noir</div>
+                            <div class="sheet-my-header-cell">au Blanc</div>
+                            <div class="sheet-my-header-cell">au Rouge</div>
+                        </div>
+                        <div class="sheet-my-row sheet-domain-row">
+                            <div class="sheet-my-left-header-cell">Domaine</div>
+                            <div class="sheet-my-cell">
+                                <input class="sheet-input-round sheet-input-black"
+                                       name="attr_alchFirstCircle" type="number" value="0"></div>
+                            <div class="sheet-my-cell">
+                                <input class="sheet-input-round sheet-input-white"
+                                       name="attr_alchSecondCircle" type="number" value="0">
+                            </div>
+                            <div class="sheet-my-cell">
+                                <input class="sheet-input-round sheet-input-red"
+                                       name="attr_alchThirdCircle" type="number" value="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="hidden" name="attr_alchCircles"
+                       value="(@{alchFirstCircle}+@{alchSecondCircle}+@{alchThirdCircle})"/>
+
+            </div></div>
+
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>les p'tites Popos</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+
+                <div class="sheet-my-table">
+                    <div class="sheet-my-row sheet-popo-row sheet-my-row-header">
+                                <p class="sheet-my-header-cell">Nom</p>
+                                <p class="sheet-my-header-cell">Quantité</p>
+                            </div>
+                    <fieldset class="repeating_popoInv">
+                        <div class="sheet-my-row sheet-popo-row">
+                            <p class="sheet-my-cell"><input type="text" name="attr_popoName"/></p>
+                            <p class="sheet-my-cell"><input type="number" name="attr_popoQuantity"/></p>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div></div>
+        </div>
+
+        <div class="sheet-grid-cell">
+            <div class="sheet-category sheet-right-tab"><h4>Constructs</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border-right"><div class="sheet-content-right">
+
+                <div class="sheet-input-row">
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-my-row-header sheet-construct-row">
+                            <div class="sheet-my-left-header-cell"></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/Zd9LJd7/fire.png" alt="fire">
+                                <span>Feu</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/XkcvCqT/water.png" alt="water">
+                                <span>Eau</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/YDsjhLp/air.png" alt="air">
+                                <span>Air</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/SnGSYr3/earth.png" alt="earth">
+                                <span>Terre</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/rmx5cZH/moon.png" alt="moon">
+                                <span>Lune</span></div>
+                            <div class="sheet-my-header-cell sheet-text-only">Niveau</div>
+                        </div>
+                        <div class="sheet-my-row sheet-construct-row">
+                            <div class="sheet-my-left-header-cell">Athanor (Poudre)</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAthanorFire" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAthanorWater" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAthanorAir" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAthanorEarth" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAthanorMoon" value="0"></div>
+                            <div class="sheet-my-cell">
+                                <select name="attr_alchToolAthanorlevel">
+                                    <option value>--</option>
+                                    <option value="black">Noir</option>
+                                    <option value="white">Blanc</option>
+                                    <option value="red">Rouge</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="sheet-my-row sheet-construct-row">
+                            <div class="sheet-my-left-header-cell">Cornue (Ambre)</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolRetortFire" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolRetortWater" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolRetortAir" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolRetortEarth" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolRetortMoon" value="0"></div>
+                            <div class="sheet-my-cell">
+                                <select name="attr_alchToolRetorlevel">
+                                    <option value>--</option>
+                                    <option value="black">Noir</option>
+                                    <option value="white">Blanc</option>
+                                    <option value="red">Rouge</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="sheet-my-row sheet-construct-row">
+                            <div class="sheet-my-left-header-cell">Creuset (Métal)</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolCrucibleFire" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolCrucibleWater" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolCrucibleAir" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolCrucibleEarth" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolCrucibleMoon" value="0"></div>
+                            <div class="sheet-my-cell">
+                                <select name="attr_alchToolCruciblelevel">
+                                    <option value>--</option>
+                                    <option value="black">Noir</option>
+                                    <option value="white">Blanc</option>
+                                    <option value="red">Rouge</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="sheet-my-row sheet-construct-row">
+                            <div class="sheet-my-left-header-cell">Aludel (Vapeur)</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAludelFire" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAludelWater" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAludelAir" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAludelEarth" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAludelMoon" value="0"></div>
+                            <div class="sheet-my-cell">
+                                <select name="attr_alchToolAludellevel">
+                                    <option value>--</option>
+                                    <option value="black">Noir</option>
+                                    <option value="white">Blanc</option>
+                                    <option value="red">Rouge</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="sheet-my-row sheet-construct-row">
+                            <div class="sheet-my-left-header-cell">Alambic (Liqueur)</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAlembicFire" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAlembicWater" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAlembicAir" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAlembicEarth" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchToolAlembicMoon" value="0"></div>
+                            <div class="sheet-my-cell">
+                                <select name="attr_alchToolAlembiclevel">
+                                    <option value>--</option>
+                                    <option value="black">Noir</option>
+                                    <option value="white">Blanc</option>
+                                    <option value="red">Rouge</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div></div>
+
+            <div class="sheet-category sheet-right-tab"><h4>Materia Primae</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border-right"><div class="sheet-content-right">
+
+                <div class="sheet-input-row">
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-my-row-header sheet-materia-row">
+                            <div class="sheet-my-left-header-cell"></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/Zd9LJd7/fire.png" alt="fire">
+                                <span>Feu</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/XkcvCqT/water.png" alt="water">
+                                <span>Eau</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/YDsjhLp/air.png" alt="air">
+                                <span>Air</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/SnGSYr3/earth.png" alt="earth">
+                                <span>Terre</span></div>
+                            <div class="sheet-my-header-cell"><img src="https://i.ibb.co/rmx5cZH/moon.png" alt="moon">
+                                <span>Lune</span></div>
+                        </div>
+                        <div class="sheet-my-row sheet-materia-row">
+                            <div class="sheet-my-left-header-cell">Actuel</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimFire" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimWater" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimAir" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimEarth" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimMoon" value="0"></div>
+                        </div>
+                        <div class="sheet-my-row sheet-materia-row">
+                            <div class="sheet-my-left-header-cell">Extra</div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimFireExtra" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimWaterExtra" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimAirExtra" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimEarthExtra" value="0"></div>
+                            <div class="sheet-my-cell"><input type="number" name="attr_alchMatPrimMoonExtra" value="0"></div>
+                        </div>
+                        <div class="sheet-my-row sheet-materia-row">
+                            <div class="sheet-my-left-header-cell">Max</div>
+                            <div class="sheet-my-cell">
+                                <input name="attr_alchMatPrimFire_max" type="number" disabled="true"
+                                       value="(@{kaFire}+@{alchCircles}+@{alchMatPrimFireExtra})"/></div>
+                            <div class="sheet-my-cell">
+                                <input name="attr_alchMatPrimWater_max" type="number" disabled="true"
+                                       value="(@{kaWater}+@{alchCircles}+@{alchMatPrimWaterExtra})"/></div>
+                            <div class="sheet-my-cell">
+                                <input name="attr_alchMatPrimAir_max" type="number" disabled="true"
+                                       value="(@{kaAir}+@{alchCircles}+@{alchMatPrimAirExtra})"/></div>
+                            <div class="sheet-my-cell">
+                                <input name="attr_alchMatPrimEarth_max" type="number" disabled="true"
+                                       value="(@{kaEarth}+@{alchCircles}+@{alchMatPrimEarthExtra})"/></div>
+                            <div class="sheet-my-cell">
+                                <input name="attr_alchMatPrimMoon_max" type="number" disabled="true"
+                                       value="(@{kaMoon}+@{alchCircles}+@{alchMatPrimMoonExtra})"/></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div></div>
+        </div>
+    </div>
+
+    <div class="sheet-grid-container-1">
+        <div class="sheet-grid-cell">
+            <div class="sheet-category"><div class="sheet-left-tri"></div><h4>Recettes</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border"><div class="sheet-content">
+
+                <fieldset class="repeating_popos">
+                    <div class="sheet-repeating-container">
+
+                        <div class="sheet-grid-container-2 sheet-repeating-right-button-template">
+                            <div>
+                                <div class="sheet-input-row">
+                                    <span>Nom:</span>
+                                    <input type="text" name="attr_alchPopoName"/>
+                                </div>
+                                <div class="sheet-input-row">
+                                    <span>Ka:</span>
+                                    <select name="attr_alchPopoKa1">
+                                        <option value> -- </option>
+                                        <option value="Fire">Feu</option>
+                                        <option value="Water">Eau</option>
+                                        <option value="Air">Air</option>
+                                        <option value="Earth">Terre</option>
+                                        <option value="Moon">Lune</option>
+                                    </select>
+                                    <select name="attr_alchPopoKa2">
+                                        <option value> -- </option>
+                                        <option value="Fire">Feu</option>
+                                        <option value="Water">Eau</option>
+                                        <option value="Air">Air</option>
+                                        <option value="Earth">Terre</option>
+                                        <option value="Moon">Lune</option>
+                                    </select>
+                                </div>
+                                <div class="sheet-input-row">
+                                    <span>Degré:</span>
+                                    <input type="number" value="0" name="attr_alchPopoDegree">
+                                </div>
+                            </div>
+                            <div class="sheet-flex-center">
+                                <input type="hidden" name="attr_alchPopoRollValue" value="(0+@{alchPopoCircle}-@{alchPopoDegree})"/>
+                                <button type="roll"
+                                        value="&{template:standardroll} {{rollName=@{alchPopoName}}} {{roll=[[1d100]]}} {{difficulty=[[@{alchPopoRollValue}*10]]}}"
+                                        name="roll_alchPopoRoll"></button>
+                            </div>
+                        </div>
+                        <div class="sheet-input-row">
+                            <span>Cercle:</span>
+                            <select name="attr_alchPopoCircle">
+                                <option value> -- </option>
+                                <option value="@{alchFirstCircle}">Oeuvre au Noir</option>
+                                <option value="@{alchSecondCircle}">Oeuvre au Blanc</option>
+                                <option value="@{alchThirdCircle}">Oeuvre au Rouge</option>
+                            </select>
+                            <span class="sheet-spacer"></span>
+                            <span>Construct:</span>
+                            <select name="attr_alchPopoConstruct">
+                                <option value=> -- </option>
+                                <option value="Athanor">Athanor</option>
+                                <option value="Retort">Cornue</option>
+                                <option value="Crucible">Creuset</option>
+                                <option value="Aludel">Aludel</option>
+                                <option value="Alembic">Alambic</option>
+                            </select>
+                        </div>
+
+                        <div class="sheet-input-row">
+                            <span>Portée:</span>
+                            <input type="text" name="attr_alchPopoRange"/>
+                        </div>
+
+                        <div class="sheet-input-row">
+                            <span>Durée:</span>
+                            <input type="text" name="attr_alchPopoDuration"/>
+                        </div>
+
+                        <div class="sheet-input-row">
+                            <span>Mémo:</span>
+                            <select name="attr_alchPopoMemo">
+                                <option value> -- </option>
+                                <option value="memo_focus">Focus</option>
+                                <option value="memo_pentacle">Pentacle</option>
+                                <option value="memo_tatoo">Tatouage</option>
+                            </select>
+                        </div>
+                        <div class="sheet-input-row">
+                            <span>Résumé:</span>
+                            <textarea name="attr_kabInvSummary"></textarea>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+            </div></div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- End Alchemy -->

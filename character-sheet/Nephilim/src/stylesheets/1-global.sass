@@ -1,0 +1,73 @@
+@import "0-variables"
+
+*
+  box-sizing: border-box
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+
+th, td, h4
+  text-align: center
+
+p
+  margin-bottom: 16px!important
+  margin-top: 16px!important
+
+table
+  border-collapse: separate
+  border-spacing: 2px
+
+input:not([disabled="true"]), select
+  background: $color-input
+
+input[disabled="true"]
+  background: $color-input-disabled
+
+input[type="number"]
+  -moz-appearance: textfield
+  text-align: center
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+
+// Fix the size of the page
+div.sheet-page
+  width: 811px
+  background-color: $page-color
+
+// Change page System
+div.sheet-tab-content
+  display: none
+
+.sheet-tabstoggle[value="tab1"] ~ div.sheet-tab1,
+.sheet-tabstoggle[value="tab2"] ~ div.sheet-tab2,
+.sheet-tabstoggle[value="tab3"] ~ div.sheet-tab3,
+.sheet-tabstoggle[value="tab4"] ~ div.sheet-tab4,
+.sheet-tabstoggle[value="tab5"] ~ div.sheet-tab5
+    display: grid
+    width: 100%
+    grid-template-columns: 100%
+
+// Header
+
+div.sheet-header
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+  justify-content: center
+  width: 811px
+
+  button
+    background-color: $color-headers-background
+    font-weight: bold
+    font-size: large
+
+  img
+    width: 25px
+    height: auto
+    margin: 5px
+    vertical-align: middle
+
+  span
+    vertical-align: middle
+    color: $color-header-text !important

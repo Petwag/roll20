@@ -1,0 +1,173 @@
+<!-- Magic -->
+
+<div class="sheet-tab2 sheet-tab-content">
+    <h2 class="sheet-title"><span>Magie</span></h2>
+
+    <div class="sheet-grid-container-2">
+        <div class="sheet-grid-cell">
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Infos</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+                <div class="sheet-input-row">
+                    <span>Voie:</span>
+                    <select name="attr_magPath">
+                        <option value> -- </option>
+                        <option value="path_sinuous_way">Sentier Sinueux</option>
+                        <option value="path_elevation_spirale">Spirale d'Elévation</option>
+                        <option value="path_mislaying_principles">Principes Egarants</option>
+                        <option value="path_schematic_labyrinth">Labyrinthe Schématique</option>
+                        <option value="path_soul_maze">Dédale de l'Ame</option>
+                    </select>
+                </div>
+                <div class="sheet-input-row">
+                    <span>Etape:</span>
+                    <select name="attr_magStep">
+                        <option value> -- </option>
+                        <option value="step_porch">Porche</option>
+                        <option value="step_crossroad">Carrefour</option>
+                        <option value="step_hearth">Coeur</option>
+                        <option value="step_thread">Fil</option>
+                        <option value="step_trial">Epreuve</option>
+                    </select>
+                </div>
+
+            </div></div>
+        </div>
+
+        <div class="sheet-grid-cell">
+            <div class="sheet-category sheet-right-tab"><h4>Domaines</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border-right"><div class="sheet-content-right">
+
+                <div class="sheet-input-row">
+                    <div class="sheet-my-table">
+                        <div class="sheet-my-row sheet-my-row-header sheet-domain-row">
+                            <div class="sheet-my-left-header-cell"></div>
+                            <div class="sheet-my-header-cell">Basse Magie</div>
+                            <div class="sheet-my-header-cell">Haute Magie</div>
+                            <div class="sheet-my-header-cell">???</div>
+                        </div>
+                        <div class="sheet-my-row sheet-domain-row">
+                            <div class="sheet-my-left-header-cell">Domaine</div>
+                            <div class="sheet-my-cell">
+                                <input class="sheet-input-round sheet-input-black"
+                                       name="attr_magFirstCircle" type="number" value="0">
+                            </div>
+                            <div class="sheet-my-cell">
+                                <input class="sheet-input-round sheet-input-white"
+                                       name="attr_magSecondCircle" type="number" value="0">
+                            </div>
+                            <div class="sheet-my-cell">
+                                <input class="sheet-input-round sheet-input-gold"
+                                       name="attr_magThirdCircle" type="number" value="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div></div>
+        </div>
+
+    </div>
+
+    <div class="sheet-grid-container-1">
+        <div class="sheet-grid-cell">
+            <div class="sheet-category"><div class="sheet-left-tri"></div><h4>Sorts</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border"><div class="sheet-content">
+
+                <fieldset class="repeating_spells">
+                    <div class="sheet-repeating-container">
+                        <div class="sheet-grid-container-2 sheet-repeating-right-button-template">
+                            <div>
+                                <div class="sheet-input-row">
+                                    <span>Nom:</span>
+                                    <input type="text" name="attr_magSpellName"/>
+                                </div>
+
+                                <div class="sheet-input-row">
+                                    <span>Ka:</span>
+                                    <select name="attr_magSpellKa">
+                                        <option value> -- </option>
+                                        <option value="@{kaFire}">Feu</option>
+                                        <option value="@{kaWater}">Eau</option>
+                                        <option value="@{kaAir}">Air</option>
+                                        <option value="@{kaEarth}">Terre</option>
+                                        <option value="@{kaMoon}">Lune</option>
+                                    </select>
+                                </div>
+                                <div class="sheet-input-row">
+                                    <span>Degré:</span>
+                                    <input type="number" name="attr_magSpellDegree" value="0">
+                                </div>
+                            </div>
+                            <div class="sheet-flex-center">
+                                <input type="hidden" name="attr_magSpellRollValue" value="(@{magSpellKa}+@{magSpellCircle}-@{magSpellDegree})"/>
+                                <button type="roll"
+                                        value="&{template:standardroll} {{rollName=@{magSpellName}}} {{roll=[[1d100]]}} {{difficulty=[[@{magSpellRollValue}*10]]}}"
+                                        name="roll_magSpellRoll"></button>
+                            </div>
+                        </div>
+
+
+                        <div class="sheet-input-row">
+                            <span>Cercle:</span>
+                            <select name="attr_magSpellCircle">
+                                <option value> -- </option>
+                                <option value="@{magFirstCircle}">Basse Magie</option>
+                                <option value="@{magSecondCircle}">Haute Magie</option>
+                                <option value="@{magThirdCircle}">???</option>
+                            </select>
+                            <span>Mémo:</span>
+                            <select name="attr_magSpellMemo">
+                                <option value> -- </option>
+                                <option value="memo_focus">Focus</option>
+                                <option value="memo_pentacle">Pentacle</option>
+                                <option value="memo_tatoo">Tatouage</option>
+                            </select>
+                        </div>
+
+                        <div class="sheet-input-row">
+                            <span>Voie:</span>
+                            <select name="attr_magSpellPath">
+                                <option value> -- </option>
+                                <option value="path_sinuous_way">Sentier Sinueux</option>
+                                <option value="path_elevation_spirale">Spirale d'Elévation</option>
+                                <option value="path_mislaying_principles">Principes Egarants</option>
+                                <option value="path_schematic_labyrinth">Labyrinthe Schématique</option>
+                                <option value="path_soul_maze">Dédale de l'Ame</option>
+                            </select>
+                            <span>Etape:</span>
+                            <select name="attr_magSpellStep">
+                                <option value> -- </option>
+                                <option value="step_porch">Porche</option>
+                                <option value="step_crossroad">Carrefour</option>
+                                <option value="step_hearth">Coeur</option>
+                                <option value="step_thread">Fil</option>
+                                <option value="step_trial">Epreuve</option>
+                            </select>
+                        </div>
+
+                        <div class="sheet-input-row">
+                            <span>Portée:</span>
+                            <input type="text" name="attr_magSpellRange"/>
+                        </div>
+
+                        <div class="sheet-input-row">
+                            <span>Durée:</span>
+                            <input type="text" name="attr_magSpellDuration"/>
+                        </div>
+
+                        <div class="sheet-input-row">
+                            <span>Résumé:</span>
+                            <textarea name="attr_magSpellSummary"></textarea>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+            </div></div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- End Magic -->

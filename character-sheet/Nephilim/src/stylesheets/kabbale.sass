@@ -1,0 +1,60 @@
+/* Page Kabbale */
+
+div.sheet-ruling-fields
+  counter-reset: sheet-rep-ruling
+
+  .sheet-counter::before
+    counter-increment: sheet-rep-ruling
+    content: counter(sheet-rep-ruling)
+
+div.sheet-my-table
+  .sheet-ordos-row
+    grid-template-columns: 5% 80% 15%
+
+div.repcontainer[data-groupname="repeating_invocations"] 
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 1px
+
+input.sheet-kabbale-input
+  position: absolute
+  background: none
+
+img.sheet-kabbale-img
+  width: 52%
+
+div.sheet-kabbale-container
+  position: relative
+
+.sheet-kabbale-input-kether
+  bottom: 330px
+  right: 171px
+.sheet-kabbale-input-binah
+  bottom: 292px
+  left: 101px
+.sheet-kabbale-input-chokmah
+  bottom: 292px
+  left: 238px
+.sheet-kabbale-input-geburah
+  bottom: 212px
+  left: 101px
+.sheet-kabbale-input-chesed
+  bottom: 212px
+  left: 238px
+.sheet-kabbale-input-tiphereth
+  bottom: 170px
+  right: 171px
+.sheet-kabbale-input-hod
+  bottom: 132px
+  left: 101px
+.sheet-kabbale-input-netzach
+  bottom: 132px
+  left: 238px
+.sheet-kabbale-input-yesod
+  bottom: 92px
+  right: 171px
+.sheet-kabbale-input-malkuth
+  bottom: 14px
+  right: 171px
+
+/* End page Kabbale */

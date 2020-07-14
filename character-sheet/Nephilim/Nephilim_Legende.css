@@ -1,0 +1,478 @@
+
+* {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+th, td, h4 {
+  text-align: center; }
+
+p {
+  margin-bottom: 16px !important;
+  margin-top: 16px !important; }
+
+table {
+  border-collapse: separate;
+  border-spacing: 2px; }
+
+input:not([disabled="true"]), select {
+  background: white; }
+
+input[disabled="true"] {
+  background: #cfcfcf; }
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  text-align: center; }
+  input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+
+div.sheet-page {
+  width: 811px;
+  background-color: #161616; }
+
+div.sheet-tab-content {
+  display: none; }
+
+.sheet-tabstoggle[value="tab1"] ~ div.sheet-tab1,
+.sheet-tabstoggle[value="tab2"] ~ div.sheet-tab2,
+.sheet-tabstoggle[value="tab3"] ~ div.sheet-tab3,
+.sheet-tabstoggle[value="tab4"] ~ div.sheet-tab4,
+.sheet-tabstoggle[value="tab5"] ~ div.sheet-tab5 {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100%; }
+
+div.sheet-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  width: 811px; }
+  div.sheet-header button {
+    background-color: #652323;
+    font-weight: bold;
+    font-size: large; }
+  div.sheet-header img {
+    width: 25px;
+    height: auto;
+    margin: 5px;
+    vertical-align: middle; }
+  div.sheet-header span {
+    vertical-align: middle;
+    color: white !important; }
+
+/* Utils */
+.sheet-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.sheet-repeating-right-button-template {
+  grid-template-columns: 80% 20% !important; }
+
+.sheet-content-center {
+  text-align: center; }
+
+.sheet-input-dotted {
+  border: none;
+  border-bottom: dotted; }
+
+div.sheet-input-row {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #767676;
+  padding: 5px 0;
+  flex-wrap: wrap; }
+  div.sheet-input-row span {
+    margin-right: 5px;
+    font-size: x-small;
+    font-weight: bold;
+    color: #767676; }
+    div.sheet-input-row span.sheet-spacer {
+      width: 10px; }
+  div.sheet-input-row input[type="text"], div.sheet-input-row select, div.sheet-input-row textarea {
+    flex-grow: 1; }
+  div.sheet-input-row > input[type="number"] {
+    width: 50px; }
+    div.sheet-input-row > input[type="number"].sheet-small {
+      width: 25px; }
+  div.sheet-input-row div.sheet-break {
+    flex-basis: 100%;
+    height: 0; }
+  div.sheet-input-row div.sheet-my-table {
+    flex-grow: 1; }
+    div.sheet-input-row div.sheet-my-table input[type="checkbox"] {
+      margin-right: 0;
+      margin-left: 0; }
+
+label.sheet-label {
+  font-size: large;
+  font-weight: bold; }
+  label.sheet-label select, label.sheet-label input:not(.sheet-input-round), label.sheet-label textarea {
+    width: 100% !important; }
+
+input.sheet-input-round {
+  border-radius: 50%;
+  height: 50px !important;
+  width: 50px !important; }
+
+input.sheet-input-white {
+  border-color: lightgray; }
+
+input.sheet-input-gold {
+  border-color: gold; }
+
+input.sheet-input-red {
+  border-color: darkred; }
+
+input.sheet-input-black {
+  border-color: black; }
+
+input.sheet-square20 {
+  height: 20px !important;
+  width: 20px !important; }
+
+input.sheet-square30 {
+  height: 30px !important;
+  width: 30px !important; }
+
+input.sheet-square50 {
+  height: 50px !important;
+  width: 50px !important; }
+
+.sheet-title {
+  line-height: 0.5;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px; }
+  .sheet-title span {
+    display: inline-block;
+    position: relative;
+    color: white; }
+    .sheet-title span:before, .sheet-title span:after {
+      content: "";
+      position: absolute;
+      height: 10px;
+      border-bottom: 2px solid white;
+      border-top: 2px solid white;
+      top: 0;
+      width: 100px; }
+    .sheet-title span:before {
+      right: 100%;
+      margin-right: 15px; }
+    .sheet-title span:after {
+      left: 100%;
+      margin-left: 15px; }
+
+.sheet-category {
+  display: flex;
+  margin: 0 5px; }
+  .sheet-category h4 {
+    background-color: #652323;
+    margin: 0;
+    color: white;
+    flex-grow: 1; }
+  .sheet-category.sheet-left-tab {
+    justify-content: flex-end; }
+  .sheet-category.sheet-right-tab {
+    justify-content: start; }
+  .sheet-category.sheet-right-tab h4, .sheet-category.sheet-left-tab h4 {
+    flex-grow: 0.7; }
+  .sheet-category .sheet-right-tri {
+    border-top: 20px solid transparent;
+    border-left: 30px solid #652323; }
+  .sheet-category .sheet-left-tri {
+    border-top: 20px solid transparent;
+    border-right: 30px solid #652323; }
+
+.sheet-my-table {
+  padding: 2px;
+  font-size: small; }
+  .sheet-my-table .sheet-my-row {
+    display: grid; }
+  .sheet-my-table .sheet-my-row-header {
+    background-color: #161616;
+    color: white;
+    padding: 3px 0; }
+    .sheet-my-table .sheet-my-row-header span {
+      color: white; }
+  .sheet-my-table .sheet-my-header-cell, .sheet-my-table .sheet-my-cell {
+    margin: 0 !important;
+    text-align: center; }
+  .sheet-my-table .sheet-my-header-cell, .sheet-my-table .sheet-my-left-header-cell {
+    font-size: x-small;
+    font-weight: bold; }
+  .sheet-my-table .sheet-my-left-header-cell {
+    margin: 0 !important;
+    color: #767676;
+    display: flex;
+    align-items: center; }
+  .sheet-my-table .sheet-my-cell input, .sheet-my-table .sheet-my-cell select {
+    width: 100%; }
+  .sheet-my-table .sheet-my-header-cell.sheet-text-only {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .sheet-my-table .sheet-my-header-cell img {
+    height: 10px;
+    vertical-align: middle; }
+  .sheet-my-table .sheet-my-header-cell span {
+    vertical-align: middle; }
+
+.sheet-grid-container-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto; }
+
+.sheet-grid-container-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto; }
+
+.sheet-grid-container-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto; }
+
+.sheet-full-3 {
+  grid-column-start: 1;
+  grid-column-end: 4; }
+
+.sheet-full-4 {
+  grid-column-start: 1;
+  grid-column-end: 5; }
+
+.sheet-grid-cell {
+  display: flex;
+  flex-direction: column; }
+
+.sheet-border-right, .sheet-border-left, .sheet-border {
+  background-image: linear-gradient(#652323, transparent), linear-gradient(#652323, transparent);
+  border-top: 2px solid #652323;
+  margin: 0 5px 10px 5px; }
+  .sheet-border-right.sheet-flex-grow-full, .sheet-border-left.sheet-flex-grow-full, .sheet-border.sheet-flex-grow-full {
+    flex-grow: 1; }
+
+.sheet-content-left, .sheet-content-right, .sheet-content {
+  background-color: #E7E6E5;
+  overflow: auto;
+  margin: 0 2px;
+  height: 100%;
+  padding: 15px; }
+
+.sheet-content-right, .sheet-border-right {
+  border-top-right-radius: 20px; }
+
+.sheet-content-left, .sheet-border-left {
+  border-top-left-radius: 20px; }
+
+.sheet-repeating-container {
+  border: solid;
+  padding: 5px; }
+  .sheet-repeating-container select, .sheet-repeating-container input:not(.sheet-input-round) {
+    width: auto !important; }
+
+/* Page Alchemy */
+input.sheet-alch-domain {
+  border-radius: 150px !important;
+  height: 75px !important;
+  width: 75px !important;
+  font-size: x-large;
+  border-width: thick !important; }
+
+h5.sheet-alchemy-domain-title {
+  margin-top: 20px; }
+
+input.sheet-alchemy-tool-input {
+  width: 41px !important;
+  height: 41px !important;
+  border-radius: 100px;
+  position: relative; }
+
+div.sheet-my-table .sheet-construct-row {
+  grid-template-columns: 28% 12% 12% 12% 12% 12% 12%; }
+
+div.sheet-my-table .sheet-domain-row {
+  grid-template-columns: 25% 25% 25% 25%; }
+
+div.sheet-my-table .sheet-materia-row {
+  grid-template-columns: 25% 15% 15% 15% 15% 15%; }
+
+div.sheet-my-table .sheet-popo-row {
+  grid-template-columns: 75% 25%; }
+
+div.repcontainer[data-groupname="repeating_popos"] {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1px; }
+
+/* End page Alchemy */
+
+/* Page Character */
+table.sheet-ka-table th {
+  font-weight: 900;
+  font-size: 1.5em;
+  padding: 10px 0;
+  border-right: 10px; }
+
+div.sheet-metamorphosis-fields {
+  counter-reset: sheet-rep-metamorphosis; }
+  div.sheet-metamorphosis-fields .sheet-counter::before {
+    counter-increment: sheet-rep-metamorphosis;
+    content: counter(sheet-rep-metamorphosis); }
+
+input[type="checkbox"].sheet-nospace {
+  margin-left: 0;
+  margin-right: 0; }
+
+input[type="checkbox"].sheet-leftspace {
+  margin-right: 0; }
+
+div.sheet-my-table .sheet-pentacle-row {
+  grid-template-columns: 25% 15% 15% 15% 15% 15%; }
+
+div.sheet-my-table .sheet-metamorphosis-row {
+  grid-template-columns: 5% 80% 15%; }
+
+div.sheet-my-table .sheet-skill-row {
+  grid-template-columns: 70% 20% 10%; }
+
+div.sheet-my-table .sheet-life-row {
+  grid-template-columns: 31% 23% 23% 23%; }
+
+div.sheet-my-table .sheet-sumweapon-row {
+  grid-template-columns: 80% 20%; }
+
+.sheet-check-hp {
+  display: flex; }
+
+.sheet-life-optional-1, .sheet-life-optional-2 {
+  display: none; }
+
+.sheet-extra-life[value="1"] ~ .sheet-life-optional-1,
+.sheet-extra-life[value="2"] ~ .sheet-life-optional-1,
+.sheet-extra-life[value="2"] ~ .sheet-life-optional-2 {
+  display: block; }
+
+div.repcontainer[data-groupname="repeating_lifes"] {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1px; }
+
+/* End page Character */
+
+/* Page Equipment */
+div.sheet-my-table .sheet-weapon-row {
+  grid-template-columns: 60% 20% 20%; }
+
+div.sheet-my-table .sheet-equipment-row {
+  grid-template-columns: 100%; }
+
+/* End page Equipment */
+
+/* Page Kabbale */
+div.sheet-ruling-fields {
+  counter-reset: sheet-rep-ruling; }
+  div.sheet-ruling-fields .sheet-counter::before {
+    counter-increment: sheet-rep-ruling;
+    content: counter(sheet-rep-ruling); }
+
+div.sheet-my-table .sheet-ordos-row {
+  grid-template-columns: 5% 80% 15%; }
+
+div.repcontainer[data-groupname="repeating_invocations"] {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1px; }
+
+input.sheet-kabbale-input {
+  position: absolute;
+  background: none; }
+
+img.sheet-kabbale-img {
+  width: 52%; }
+
+div.sheet-kabbale-container {
+  position: relative; }
+
+.sheet-kabbale-input-kether {
+  bottom: 330px;
+  right: 171px; }
+
+.sheet-kabbale-input-binah {
+  bottom: 292px;
+  left: 101px; }
+
+.sheet-kabbale-input-chokmah {
+  bottom: 292px;
+  left: 238px; }
+
+.sheet-kabbale-input-geburah {
+  bottom: 212px;
+  left: 101px; }
+
+.sheet-kabbale-input-chesed {
+  bottom: 212px;
+  left: 238px; }
+
+.sheet-kabbale-input-tiphereth {
+  bottom: 170px;
+  right: 171px; }
+
+.sheet-kabbale-input-hod {
+  bottom: 132px;
+  left: 101px; }
+
+.sheet-kabbale-input-netzach {
+  bottom: 132px;
+  left: 238px; }
+
+.sheet-kabbale-input-yesod {
+  bottom: 92px;
+  right: 171px; }
+
+.sheet-kabbale-input-malkuth {
+  bottom: 14px;
+  right: 171px; }
+
+/* End page Kabbale */
+
+/* Page Magic */
+div.repcontainer[data-groupname="repeating_spells"] {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1px; }
+
+/* End page Magic */
+
+.sheet-rolltemplate-standardroll .sheet-template-container table {
+  width: 100%;
+  border: 1px solid #652323;
+  color: black;
+  font-size: 1em;
+  font-family: "Helvetica Neue", Helvetica, sans-serif; }
+  .sheet-rolltemplate-standardroll .sheet-template-container table span.sheet-success {
+    color: #3FB315;
+    font-weight: bolder; }
+  .sheet-rolltemplate-standardroll .sheet-template-container table span.sheet-failure {
+    color: #f91615;
+    font-weight: bolder; }
+
+.sheet-rolltemplate-standardroll .sheet-template-container th, .sheet-rolltemplate-standardroll .sheet-template-container caption {
+  background-color: #652323;
+  color: white;
+  padding: 2px;
+  border-bottom: 1px solid black;
+  line-height: 1.6em;
+  font-size: 1.2em;
+  font-weight: bold; }
+
+.sheet-rolltemplate-standardroll .sheet-template-container td {
+  padding: 5px;
+  /*border-bottom: 1px solid black*/ }
+
+.sheet-rolltemplate-standardroll .sheet-template-container tr:nth-child(odd) {
+  background-color: #d9d9d6; }
+
+.sheet-rolltemplate-standardroll .sheet-template-container tr:nth-child(even) {
+  background-color: #e9e9e9; }

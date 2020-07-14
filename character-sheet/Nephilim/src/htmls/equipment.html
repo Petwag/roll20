@@ -1,0 +1,52 @@
+<!-- Equipment -->
+
+<div class="sheet-tab5 sheet-tab-content">
+    <h2 class="sheet-title"><span>Equipement</span></h2>
+
+    <div class="sheet-grid-container-2">
+        <div class="sheet-grid-cell">
+            <div class="sheet-category sheet-left-tab"><div class="sheet-left-tri"></div><h4>Armes/Armures</h4></div>
+            <div class="sheet-border-left"><div class="sheet-content-left">
+
+                <div class="sheet-my-table">
+                    <div class="sheet-my-row sheet-weapon-row sheet-my-row-header">
+                                <p class="sheet-my-header-cell">Objet</p>
+                                <p class="sheet-my-header-cell">Valeur</p>
+                                <p class="sheet-my-header-cell">Type</p>
+                            </div>
+                    <fieldset class="repeating_weapons">
+                        <div class="sheet-my-row sheet-weapon-row">
+                            <p class="sheet-my-cell"><input type="text" name="attr_equipName"/></p>
+                            <p class="sheet-my-cell"><input type="number" name="attr_equipValue"/></p>
+                            <p class="sheet-my-cell"><select name="attr_equipType">
+                                <option value="weapon" selected>Arme</option>
+                                <option value="armor">Armure</option>
+                            </select></p>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div></div>
+        </div>
+
+        <div class="sheet-grid-cell">
+            <div class="sheet-category sheet-right-tab"><h4>Equipement</h4><div class="sheet-right-tri"></div></div>
+            <div class="sheet-border-right"><div class="sheet-content-right">
+
+                <div class="sheet-my-table">
+                    <div class="sheet-my-row sheet-equipment-row sheet-my-row-header">
+                                <p class="sheet-my-header-cell">Objet</p>
+                            </div>
+                    <fieldset class="repeating_equipments">
+                        <div class="sheet-my-row sheet-equipment-row">
+                            <p class="sheet-my-cell"><input type="text" name="attr_equipName"/></p>
+                        </div>
+                    </fieldset>
+                </div>
+
+            </div></div>
+        </div>
+    </div>
+</div>
+
+<!-- End Equipment -->
