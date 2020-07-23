@@ -1,9 +1,11 @@
 # Character Sheet for Roll20
 ## System : Nephilim Légende
-
+---
+**NOTE 1**
+Because you ar estupind and you always forgot, * gulp my_watch *
 
 ---
-**NOTE**
+**NOTE 2**
 
 Do not edit Nephilim_Legende.css, Nephilim_Legend.html or dev/sheet.html directly. 
 
